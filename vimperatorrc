@@ -1,0 +1,27 @@
+"ブックマークツールバーの表示
+set guioptions=B
+"ブラウザタイトルの変更
+set titlestring=Firefox
+
+"ビープ音を鳴らさずビジュアルベルを使用
+set visualbell
+hi Bell display: none;
+
+"j/kの移動量を5倍に
+map j 7<C-e>
+map k 7<C-y>
+" 選択文字列のコピーを <C-c> に割り当て
+map <C-c> Y
+" 選択文字列のgoogle検索を <C-g> に割り当て
+map <C-g> YP
+"noremap <C-v> <C-v><C-v>
+
+unmap <C-v>
+
+" H/L や ← → でタブ移動
+map h gT
+map l gt
+map <Left>  gT
+map <Right>  gt
+
+

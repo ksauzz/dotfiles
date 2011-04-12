@@ -1,0 +1,6 @@
+#!/bin/bash
+PWD=`pwd`
+echo install dotfiles.
+for file in *rc vim ; do
+  ln -vs $PWD/$file ~/.$file 
+done
