@@ -2,5 +2,9 @@
 PWD=`pwd`
 echo install dotfiles.
 for file in *rc vim ; do
-  ln -vs $PWD/$file ~/.$file 
+  if [ -e ~/.$file ]; then
+    echo "~/.$file is exist"
+  else
+    ln -vs $PWD/$file ~/.$file 
+  fi
 done
