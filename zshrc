@@ -1,3 +1,7 @@
+if [ -f ~/.profile ]; then
+	. ~/.profile
+fi
+
 ## Environment variable configuration
 #
 # LANG
@@ -82,6 +86,9 @@ kterm*|xterm)
     ;;
 esac 
 
+# rvm configuration
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 # User specific aliases and functions
 
 alias ll='ls -lG'
@@ -91,6 +98,7 @@ alias mv='mv -i'
 alias h=history
 alias diff=colordiff
 alias grep='grep --color=auto'
+alias info='info --vi-keys'
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
@@ -120,9 +128,18 @@ export PATH=$PATH:/usr/local/clamXav/bin
 export PATH=$PATH:/usr/local/play
 export PATH=$PATH:/usr/local/mercurial/bin
 export PATH=$PATH:/usr/local/sbt/bin
+export PATH=$PATH:/usr/local/tig/bin
+export PATH=$PATH:/usr/local/jmeter/bin
+export PATH=$PATH:/usr/local/mongodb/bin
+export PATH=$PATH:/usr/local/erlang/bin/
+export PATH=$PATH:/usr/local/rabbitmq/sbin/
+export PATH=$PATH:/usr/local/p4/bin/
+export PATH=$PATH:/usr/local/Gauche/bin/
+
 
 export MANPATH=/usr/local/zeromq/share:$MANPATH
 export MANPATH=/usr/local/git/share:$MANPATH
 export MANPATH=/usr/local/mysql/share:$MANPATH
 export MANPATH=/opt/local/share/man:$MANPATH
+export MANPATH=/usr/local/rabbitmq/share/man:$MANPATH
 
