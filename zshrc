@@ -86,6 +86,47 @@ kterm*|xterm)
     ;;
 esac 
 
+# set terminal title for GNU screen
+#
+if [ "$TERM" = "screen" ]; then
+  chpwd () { echo -n "_`dirs`\\" }
+  preexec() {
+    # see [zsh-workers:13180]
+    # http://www.zsh.org/mla/workers/2000/msg03993.html
+    emulate -L zsh
+    local -a cmd; cmd=(${(z)2})
+    case $cmd[1] in
+      fg)
+        if (( $#cmd == 1 )); then
+          cmd=(builtin jobs -l %+)
+        else
+          cmd=(builtin jobs -l $cmd[2])
+        fi
+        ;;
+      %*) 
+        cmd=(builtin jobs -l $cmd[1])
+        ;;
+      cd)
+        if (( $#cmd == 2)); then
+          cmd[1]=$cmd[2]
+        fi
+        ;&
+      *)
+        echo -n "k$cmd[1]:t\\"
+        return
+        ;;
+    esac
+
+    local -A jt; jt=(${(kv)jobtexts})
+
+    $cmd >>(read num rest
+      cmd=(${(z)${(e):-\$jt$num}})
+      echo -n "k$cmd[1]:t\\") 2>/dev/null
+  }
+  chpwd
+fi
+
+
 # rvm configuration
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -113,6 +154,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH  #macports requirements
 export PATH=~/dotfiles/bin:$PATH
 export PATH=/usr/local/vim/bin:$PATH
 export PATH=/usr/local/ctags/bin:$PATH
+export PATH=/usr/local/screen/bin:$PATH
 export PATH=$RUBY_HOME/bin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/usr/local/zeromq/bin/
@@ -142,4 +184,5 @@ export MANPATH=/usr/local/git/share:$MANPATH
 export MANPATH=/usr/local/mysql/share:$MANPATH
 export MANPATH=/opt/local/share/man:$MANPATH
 export MANPATH=/usr/local/rabbitmq/share/man:$MANPATH
+export MANPATH=/usr/local/screen/share/man:$MANPATH
 

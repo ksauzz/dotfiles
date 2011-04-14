@@ -1,3 +1,7 @@
 shell /bin/zsh
-defscrollback 8195
+defscrollback 8192
 vbell off
+startup_message off
+
+hardstatus string "%?%h%:%t (screen #%n on %H)%?"
+caption always "%{=r dd}%-Lw%40L>%?%F%{=b dR}%:[%? %n%f %t %?%F%{-}%:]%?%+Lw %?%F%-024=GNU Screen of Git master%:%=%?"
