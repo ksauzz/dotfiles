@@ -33,3 +33,11 @@ set pastetoggle=<F11>
 
 " QuickRunで横分割にする
 let g:quickrun_config = { '*': { 'split': ''}}
+
+" keymap
+inoremap <C-j> <DOWN>
+inoremap <C-k> <UP>
+inoremap <C-l> <RIGHT>
+inoremap <C-h> <LEFT>
+
+nnoremap <ESC><ESC> :nohlsearch<CR>
