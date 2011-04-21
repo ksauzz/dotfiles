@@ -33,6 +33,8 @@ set pastetoggle=<F11>
 
 " QuickRunで横分割にする
 let g:quickrun_config = { '*': { 'split': ''}}
+" neocomplcache enable
+let g:neocomplcache_enable_at_startup = 1
 
 " keymap
 inoremap <C-j> <DOWN>
