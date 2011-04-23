@@ -140,6 +140,7 @@ alias h=history
 alias diff=colordiff
 alias grep='grep --color=auto'
 alias info='info --vi-keys'
+alias scala='scala -Dfile.encoding=UTF-8'
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
