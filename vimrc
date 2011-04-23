@@ -10,6 +10,8 @@ set number
 set autoindent
 set showcmd
 set showmatch
+set showmode
+set laststatus=2 " always show status lines.
 set backspace=indent,eol,start
 set ruler
 set visualbell
@@ -31,7 +33,7 @@ set swapfile
 setlocal omnifunc=syntaxcomplete#Complete
 set pastetoggle=<F11>
 
-" QuickRunで横分割にする
+" horizontally split on QuickRun
 let g:quickrun_config = { '*': { 'split': ''}}
 " neocomplcache enable
 let g:neocomplcache_enable_at_startup = 1
