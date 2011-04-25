@@ -132,7 +132,9 @@ fi
 
 # User specific aliases and functions
 
-alias ll='ls -lG'
+alias ls='ls -G'
+alias ll='ls -l'
+alias la='ls -a'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -141,6 +143,7 @@ alias diff=colordiff
 alias grep='grep --color=auto'
 alias info='info --vi-keys'
 alias scala='scala -Dfile.encoding=UTF-8'
+alias zsrc='source ~/.zshrc'
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
@@ -148,6 +151,7 @@ export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 export RUBY_HOME=/usr/local/ruby
 export M2_HOME=/usr/local/maven
 export M2_REPO=$HOME/.m2/repository
+export MAVEN_OPTS="-Dfile.encoding=UTF-8"
 export EDITOR=vim
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH  #macports requirements
