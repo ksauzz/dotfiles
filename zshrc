@@ -156,7 +156,7 @@ export EDITOR=vim
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH  #macports requirements
 
-export PATH=~/dotfiles/bin:$PATH
+export PATH=~/dotfiles/usr/bin:$PATH
 export PATH=/usr/local/vim/bin:$PATH
 export PATH=/usr/local/ctags/bin:$PATH
 export PATH=/usr/local/screen/bin:$PATH
@@ -184,6 +184,7 @@ export PATH=$PATH:/usr/local/p4/bin/
 export PATH=$PATH:/usr/local/Gauche/bin/
 
 
+export MANPATH=~/dotfiles/usr/share/man:$MANPATH
 export MANPATH=/usr/local/zeromq/share:$MANPATH
 export MANPATH=/usr/local/git/share:$MANPATH
 export MANPATH=/usr/local/mysql/share:$MANPATH
