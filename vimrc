@@ -44,4 +44,23 @@ inoremap <C-k> <UP>
 inoremap <C-l> <RIGHT>
 inoremap <C-h> <LEFT>
 
+" tab keymap
+nnoremap <C-t> :tabedit<Return>
+"nnoremap <C-w> :tabclose<Return>
+nnoremap <C-n> :tabnext<Return>
+nnoremap <C-p> :tabprevious<Return> 
+
 nnoremap <ESC><ESC> :nohlsearch<CR>
+
+" ZenkakuSpace highlight
+if has('syntax')
+  syntax enable
+  function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=underline ctermfg=red gui=underline guifg=red
+    silent! match ZenkakuSpace /　/
+  endfunction
+  augroup ZenkakuSpace
+    autocmd!
+    autocmd VimEnter,BufEnter * call ZenkakuSpace()
+  augroup END
+endif
