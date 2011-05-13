@@ -30,6 +30,16 @@ set nobackup
 set nowritebackup
 set swapfile
 
+" cursorline highlight
+set cursorline
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
+
+
 setlocal omnifunc=syntaxcomplete#Complete
 set pastetoggle=<F11>
 
