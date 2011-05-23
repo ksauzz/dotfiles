@@ -167,7 +167,15 @@ RPROMPT='[`rprompt-git-current-branch`%~]'
 
 # User specific aliases and functions
 
-alias ls='ls -G'
+case "${OSTYPE}" in
+freebsd*|darwin*)
+alias ls="ls -G -w"
+;;
+linux*)
+alias ls="ls --color"
+;;
+esac
+
 alias ll='ls -l'
 alias la='ls -a'
 alias rm='rm -i'
@@ -217,6 +225,8 @@ export PATH=$PATH:/usr/local/erlang/bin/
 export PATH=$PATH:/usr/local/rabbitmq/sbin/
 export PATH=$PATH:/usr/local/p4/bin/
 export PATH=$PATH:/usr/local/Gauche/bin/
+export PATH=$PATH:/usr/local/redis/bin/
+export PATH=$PATH:/usr/local/thrift/bin
 
 
 export MANPATH=~/dotfiles/usr/share/man:$MANPATH
