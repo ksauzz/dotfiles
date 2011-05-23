@@ -8,3 +8,13 @@ for file in *rc vim ; do
     ln -vs $PWD/$file ~/.$file 
   fi
 done
+
+GITIGNORE=~/.gitignore
+
+git config --global core.excludesfile $GITIGNORE
+tags_cnt=`grep -c "doc/tags"  $GITIGNORE`
+if [ $tags_cnt -eq 0 ]; then
+  echo doc/tags    >> $GITIGNORE
+  echo doc/tags-ja >> $GITIGNORE
+fi
+
