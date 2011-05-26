@@ -1,20 +1,49 @@
 #!/bin/bash
-PWD=`pwd`
-echo install dotfiles.
-for file in *rc vim ; do
-  if [ -e ~/.$file ]; then
-    echo "~/.$file is exist"
-  else
-    ln -vs $PWD/$file ~/.$file 
+
+make_slink(){
+  PWD=`pwd`
+  echo install dotfiles.
+  for file in *rc vim ; do
+    if [ -e ~/.$file ]; then
+      echo "~/.$file is exist"
+    else
+      ln -vs $PWD/$file ~/.$file 
+    fi
+  done
+}
+
+configure_gitignore(){
+  GITIGNORE=~/.gitignore
+
+  git config --global core.excludesfile $GITIGNORE
+  tags_cnt=`grep -c "doc/tags"  $GITIGNORE`
+  if [ $tags_cnt -eq 0 ]; then
+    echo doc/tags    >> $GITIGNORE
+    echo doc/tags-ja >> $GITIGNORE
   fi
-done
+}
 
-GITIGNORE=~/.gitignore
+make_vimproc(){
+  PWD=`pwd`
+  # make vimproc
+  cd vim/bundle/vimproc
+  if [ -e autoload/proc.so ] ;then
+    cd $PWD
+    return 
+  fi
 
-git config --global core.excludesfile $GITIGNORE
-tags_cnt=`grep -c "doc/tags"  $GITIGNORE`
-if [ $tags_cnt -eq 0 ]; then
-  echo doc/tags    >> $GITIGNORE
-  echo doc/tags-ja >> $GITIGNORE
-fi
+  echo make vimproc
+  case "${OSTYPE}" in
+  freebsd*|darwin*)
+    make -f make_gcc.mak
+  ;;
+  linux*)
+    make -f make_mac.mak
+  ;;
+  esac
+  cd $PWD
+}
 
+make_slink
+configure_gitignore
+make_vimproc
