@@ -174,13 +174,13 @@ RPROMPT='[`rprompt-git-current-branch`%~]'
 if [ ! -z "$JAVA_HOME" ]; then
   return
 fi
-expected_java_home="
+expected_java_home=(
 /opt/jdk
 /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 /usr/java/default
 /usr/java/current
 /usr/local/java
-"
+)
 for dir in $expected_java_home; do
   if [ -x $dir/bin/java ]; then
     JAVA_HOME=$dir
