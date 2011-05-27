@@ -1,0 +1,10 @@
+alias ll='ls -l'
+alias la='ls -a'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias h=history
+alias diff=colordiff
+alias grep='grep --color=auto'
+alias info='info --vi-keys'
+alias scala='scala -Dfile.encoding=UTF-8'
