@@ -35,10 +35,10 @@ make_vimproc(){
   echo make vimproc
   case "${OSTYPE}" in
   freebsd*|darwin*)
-    make -f make_gcc.mak
+    make -f make_mac.mak
   ;;
   linux*)
-    make -f make_mac.mak
+    make -f make_gcc.mak
   ;;
   esac
   cd $PWD
