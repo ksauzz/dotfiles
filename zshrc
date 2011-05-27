@@ -130,6 +130,8 @@ fi
 #
 # Show branch name in Zsh's right prompt
 #   https://gist.github.com/214109
+case "${OSTYPE}" in
+freebsd*|darwin*)
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
 function rprompt-git-current-branch {
@@ -160,11 +162,31 @@ function rprompt-git-current-branch {
 }
 
 setopt prompt_subst
+;;
+esac
 
 RPROMPT='[`rprompt-git-current-branch`%~]'
 
 # rvm configuration
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# JAVA_HOME 
+if [ ! -z "$JAVA_HOME" ]; then
+  return
+fi
+expected_java_home="
+/opt/jdk
+/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+/usr/java/default
+/usr/java/current
+/usr/local/java
+"
+for dir in $expected_java_home; do
+  if [ -x $dir/bin/java ]; then
+    JAVA_HOME=$dir
+    break
+  fi
+done
 
 # User specific aliases and functions
 
@@ -189,7 +211,6 @@ alias info='info --vi-keys'
 alias scala='scala -Dfile.encoding=UTF-8'
 alias zsrc='source ~/.zshrc'
 
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 
 export RUBY_HOME=/usr/local/ruby
