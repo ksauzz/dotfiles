@@ -73,6 +73,7 @@ setopt share_history        # share command history data
 
 ## Completion configuration
 #
+fpath=(~/dotfiles/zsh/completion $fpath)
 autoload -U compinit
 compinit
 
