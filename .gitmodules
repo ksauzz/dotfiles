@@ -28,3 +28,9 @@
 [submodule "vim/bundle/EasyMotion"]
 	path = vim/bundle/EasyMotion
 	url = https://github.com/vim-scripts/EasyMotion.git
+[submodule "vim/bundle/vimshell"]
+	path = vim/bundle/vimshell
+	url = https://github.com/Shougo/vimshell.git
+[submodule "vim/bundle/vimproc"]
+	path = vim/bundle/vimproc
+	url = https://github.com/Shougo/vimproc.git
