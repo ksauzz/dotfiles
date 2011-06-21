@@ -34,3 +34,9 @@
 [submodule "vim/bundle/vimproc"]
 	path = vim/bundle/vimproc
 	url = https://github.com/Shougo/vimproc.git
+[submodule "vim/bundle/git-vim"]
+	path = vim/bundle/git-vim
+	url = https://github.com/motemen/git-vim.git
+[submodule "vim/bundle/vim-align"]
+	path = vim/bundle/vim-align
+	url = https://github.com/pix/vim-align.git
