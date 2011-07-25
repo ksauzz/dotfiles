@@ -160,6 +160,7 @@ done
 case "${OSTYPE}" in
 freebsd*|darwin*)
 alias ls="ls -G -w"
+alias top="top -o cpu"
 ;;
 linux*)
 alias ls="ls --color"
