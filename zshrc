@@ -5,13 +5,13 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="awesomepanda"
+export ZSH_THEME="dst"
 
 # Set to this to use case-sensitive completion
 export CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+export DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
@@ -178,8 +178,15 @@ alias grep='grep --color=auto'
 alias info='info --vi-keys'
 alias scala='scala -Dfile.encoding=UTF-8'
 alias zsrc='source ~/.zshrc'
+alias javac='javac -J-Dfile.encoding=UTF-8'
+alias java='java -Dfile.encoding=UTF-8'
+alias jar='jar -Dfile.encoding=UTF-8'
 
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
+
+export LUA_CPATH="/usr/local/lib/luarocks/lib/lua/5.1//?.so;$LUA_PATH"
+export LUA_PATH="/usr/local/lib/luarocks/share/lua/5.1//?.lua;$LUA_PATH"
+export LUA_INIT="require 'luarocks.require'"
 
 export RUBY_HOME=/usr/local/ruby
 export M2_HOME=/usr/local/maven
@@ -217,6 +224,8 @@ export PATH=$PATH:/usr/local/p4/bin/
 export PATH=$PATH:/usr/local/Gauche/bin/
 export PATH=$PATH:/usr/local/redis/bin/
 export PATH=$PATH:/usr/local/thrift/bin
+export PATH=$PATH:/usr/local/hadoop/bin
+export PATH=$PATH:/usr/local/kyototycoon/bin
 
 
 export MANPATH=~/dotfiles/usr/share/man:$MANPATH

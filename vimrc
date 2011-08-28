@@ -55,7 +55,7 @@ inoremap <C-h> <LEFT>
 
 " tab keymap
 nnoremap <C-t> :tabedit<Return>
-"nnoremap <C-w> :tabclose<Return>
+nnoremap <C-x> :tabclose<Return>
 nnoremap <C-n> :tabnext<Return>
 nnoremap <C-p> :tabprevious<Return> 
 
