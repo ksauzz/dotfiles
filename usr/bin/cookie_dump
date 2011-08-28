@@ -1,0 +1,27 @@
+#!/bin/bash
+
+usage() {
+  cat <<EOF
+========================================
+the cookie dumper for MacOS
+
+dumping cookies from firefox's local DB.
+The output format is suitable for curl.
+========================================
+
+usage
+-----
+  $0 [cookie's domain] 
+
+  ex) $0 .yahoo.co.jp
+EOF
+}
+
+if [ "x$1" == "x" ];then
+  usage
+  exit
+fi
+
+host=$1
+default_prifile=`find ~/Library/Application\ Support/Firefox/Profiles/ -name *.default|head -1`
+sqlite3 "${default_prifile}/cookies.sqlite" "select name, value from moz_cookies where host like \"$host\"" | awk '{FS="|"}{print $1 "=" $2 ";" }' | tr -d '\012'
