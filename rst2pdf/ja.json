@@ -9,7 +9,8 @@
 		"stdFont":   "VL-PGothic-Regular",
 		"stdBold":   "VL-PGothic-Regular",
 		"stdItalic": "VL-PGothic-Regular",
-		"stdMono":   "VL-Gothic-Regular"
+    "stdBoldItalic" : "VL-PGothic-Regular",
+		"stdMono":   "VL-PGothic-Regular"
 	},
 	"styles" : [
 		["base" , {
@@ -18,5 +19,5 @@
 		["literal" , {
 			"wordWrap": "None"
 		}]
-	]
+  ]
 }

@@ -20,4 +20,4 @@ footer=""
 fit_mode="shrink"
 # What is the maximum level of heading that starts in a new page.
 # 0 means no level starts in a new page.
-break_level=0
+break_level=1
