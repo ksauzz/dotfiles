@@ -3,7 +3,7 @@
 make_slink(){
   PWD=`pwd`
   echo install dotfiles.
-  for file in *rc vim oh-my-zsh rst2pdf ; do
+  for file in *rc vim oh-my-zsh rst2pdf my.cnf ; do
     if [ -e ~/.$file ]; then
       echo "~/.$file is exist"
     else
