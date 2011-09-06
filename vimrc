@@ -31,6 +31,10 @@ set nobackup
 set nowritebackup
 set swapfile
 
+set list
+set listchars=tab:\ \ 
+highlight SpecialKey cterm=underline ctermbg=darkgray guibg=darkgray
+
 " cursorline highlight
 set cursorline
 :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -59,7 +63,8 @@ nnoremap <C-x> :tabclose<Return>
 nnoremap <C-n> :tabnext<Return>
 nnoremap <C-p> :tabprevious<Return> 
 
-nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap <ESC><ESC> :nohlsearch<Return>
+nnoremap <F2> :NERDTreeToggle<Return>
 
 " ZenkakuSpace highlight
 if has('syntax')
@@ -150,3 +155,5 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
+" Java autocmd
+autocmd! BufNew,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*  set noexpandtab
