@@ -156,4 +156,4 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " Java autocmd
-autocmd! BufNew,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*  set noexpandtab
+autocmd! BufNew,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/*  set noexpandtab
