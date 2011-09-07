@@ -150,7 +150,7 @@ expected_java_home=(
 )
 for dir in $expected_java_home; do
   if [ -x $dir/bin/java ]; then
-    JAVA_HOME=$dir
+    export JAVA_HOME=$dir
     break
   fi
 done
