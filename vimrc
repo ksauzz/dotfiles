@@ -156,4 +156,8 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " Java autocmd
-autocmd! BufNew,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/*  set noexpandtab
+:let java_mark_braces_in_parens_as_errors=1
+:let java_highlight_java_lang_ids=1
+:let java_highlight_java_io=1
+:let java_highlight_functions="indent"
+autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/*  set noexpandtab
