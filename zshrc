@@ -46,7 +46,8 @@ setopt auto_pushd
 
 # command correct edition before each completion attempt
 #
-setopt correct
+# setopt correct
+unsetopt correct_all
 
 # compacked complete list display
 #
@@ -189,6 +190,7 @@ export LUA_PATH="/usr/local/lib/luarocks/share/lua/5.1//?.lua;$LUA_PATH"
 export LUA_INIT="require 'luarocks.require'"
 
 export RUBY_HOME=/usr/local/ruby
+export ORA_HOME=/usr/local/sqlplus
 export M2_HOME=/usr/local/maven
 export M2_REPO=$HOME/.m2/repository
 export MAVEN_OPTS="-Dfile.encoding=UTF-8"
@@ -205,6 +207,7 @@ export PATH=/usr/local/maven/bin:$PATH
 export PATH=/usr/local/memcached/bin:$PATH
 export PATH=$RUBY_HOME/bin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:~/.cabal/bin/
 export PATH=$PATH:/usr/local/zeromq/bin/
 export PATH=$PATH:/usr/local/bind/sbin
 export PATH=$PATH:/usr/local/mysql/bin
@@ -227,7 +230,9 @@ export PATH=$PATH:/usr/local/redis/bin/
 export PATH=$PATH:/usr/local/thrift/bin
 export PATH=$PATH:/usr/local/hadoop/bin
 export PATH=$PATH:/usr/local/kyototycoon/bin
+export PATH=$PATH:$ORA_HOME/bin
 
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
 
 export MANPATH=~/dotfiles/usr/share/man:$MANPATH
 export MANPATH=/usr/local/zeromq/share:$MANPATH
@@ -239,3 +244,6 @@ export MANPATH=/usr/local/screen/share/man:$MANPATH
 
 # zaw https://github.com/zsh-users/zaw
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
+
+# oracle SQL*Plus setting
+export NLS_LANG='Japanese_Japan.UTF8'
