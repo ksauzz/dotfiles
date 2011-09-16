@@ -49,7 +49,16 @@ setlocal omnifunc=syntaxcomplete#Complete
 set pastetoggle=<F11>
 
 " horizontally split on QuickRun
-let g:quickrun_config = { '*': { 'split': ''}}
+let g:quickrun_config = {
+      \ '*': {
+      \   'split': '',
+      \   'running_mark': 'running quickrun... (  ﾟДﾟ)',
+      \   'into': '1',
+      \ },
+      \ 'erlang': {
+      \   'command': 'rebar',
+      \   'exec': ['echo %c compile eunit', '%c compile eunit'] },
+      \ }
 
 " keymap
 inoremap <C-j> <DOWN>
@@ -65,6 +74,7 @@ nnoremap <C-p> :tabprevious<Return>
 
 nnoremap <ESC><ESC> :nohlsearch<Return>
 nnoremap <F2> :NERDTreeToggle<Return>
+nnoremap <F5> :QuickRun<Return>
 
 " ZenkakuSpace highlight
 if has('syntax')
@@ -156,8 +166,16 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " Java autocmd
-:let java_mark_braces_in_parens_as_errors=1
-:let java_highlight_java_lang_ids=1
-:let java_highlight_java_io=1
-:let java_highlight_functions="indent"
-autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/*  set noexpandtab
+function JavaSetting()
+  set noexpandtab
+
+  compiler ant 
+  set makeprg=mvn\ compile
+
+  let java_mark_braces_in_parens_as_errors=1
+  let java_highlight_java_all=1
+  let java_highlight_functions="indent"
+
+  noremap <F1> :update<CR>:make<CR><C-W>
+endfunction
+autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/* call JavaSetting()
