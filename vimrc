@@ -179,3 +179,6 @@ function JavaSetting()
   noremap <F1> :update<CR>:make<CR><C-W>
 endfunction
 autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/* call JavaSetting()
+
+" erlang autocmd
+autocmd FileType erlang set makeprg=rebar\ compile
