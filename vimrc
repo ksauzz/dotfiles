@@ -65,6 +65,11 @@ inoremap <C-j> <DOWN>
 inoremap <C-k> <UP>
 inoremap <C-l> <RIGHT>
 inoremap <C-h> <LEFT>
+inoremap <C-Space> <Esc>
+
+nnoremap <C-h>     :<C-u>help<Space>
+nnoremap <Space>.  :<C-u>edit $MYVIMRC<CR>
+nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
 
 " tab keymap
 nnoremap <C-t> :tabedit<Return>
@@ -166,7 +171,7 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " Java autocmd
-function JavaSetting()
+function! JavaSetting()
   set noexpandtab
 
   compiler ant 
