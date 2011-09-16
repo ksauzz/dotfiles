@@ -56,7 +56,7 @@ let g:quickrun_config = {
       \   'into': '1',
       \ },
       \ 'erlang': {
-      \   'command': 'rebar',
+      \   'command': 'make',
       \   'exec': ['echo %c compile eunit', '%c compile eunit'] },
       \ }
 
@@ -74,7 +74,7 @@ nnoremap <C-p> :tabprevious<Return>
 
 nnoremap <ESC><ESC> :nohlsearch<Return>
 nnoremap <F2> :NERDTreeToggle<Return>
-nnoremap <F5> :QuickRun<Return>
+nnoremap <F3> :QuickRun<Return>
 
 " ZenkakuSpace highlight
 if has('syntax')
@@ -181,4 +181,4 @@ endfunction
 autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/* call JavaSetting()
 
 " erlang autocmd
-autocmd FileType erlang set makeprg=rebar\ compile
+autocmd FileType erlang set makeprg=make\ compile
