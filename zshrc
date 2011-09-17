@@ -139,9 +139,6 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # JAVA_HOME 
-if [ ! -z "$JAVA_HOME" ]; then
-  return
-fi
 expected_java_home=(
 /opt/jdk
 /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
@@ -173,6 +170,7 @@ alias la='ls -a'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias v=vim
 alias h=history
 alias diff=colordiff
 alias grep='grep --color=auto'
