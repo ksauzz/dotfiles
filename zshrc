@@ -195,6 +195,7 @@ export M2_HOME=/usr/local/maven
 export M2_REPO=$HOME/.m2/repository
 export MAVEN_OPTS="-Dfile.encoding=UTF-8"
 export EDITOR=vim
+export MANPAGER="most -s"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH  #macports requirements
@@ -241,6 +242,7 @@ export MANPATH=/usr/local/mysql/share:$MANPATH
 export MANPATH=/opt/local/share/man:$MANPATH
 export MANPATH=/usr/local/rabbitmq/share/man:$MANPATH
 export MANPATH=/usr/local/screen/share/man:$MANPATH
+export MANPATH=/usr/local/erlang/share/man:$MANPATH
 
 # zaw https://github.com/zsh-users/zaw
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
