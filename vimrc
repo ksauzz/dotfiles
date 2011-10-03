@@ -4,7 +4,7 @@ call pathogen#helptags()
 
 syntax on
 filetype plugin indent on
-"colorscheme darkblue
+"colorscheme koehler
 
 set nocompatible
 set number
@@ -80,6 +80,10 @@ nnoremap <C-p> :tabprevious<Return>
 nnoremap <ESC><ESC> :nohlsearch<Return>
 nnoremap <F2> :NERDTreeToggle<Return>
 nnoremap <F3> :QuickRun<Return>
+
+nnoremap ;; :Unite<Space>
+nnoremap ;b :Unite buffer<Return>
+nnoremap ;t :Unite tab<Return>
 
 " ZenkakuSpace highlight
 if has('syntax')

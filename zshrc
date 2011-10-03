@@ -179,7 +179,7 @@ alias scala='scala -Dfile.encoding=UTF-8'
 alias zsrc='source ~/.zshrc'
 alias javac='javac -J-Dfile.encoding=UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
-alias jar='jar -Dfile.encoding=UTF-8'
+#alias jar='jar -Dfile.encoding=UTF-8'
 
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 
@@ -193,7 +193,7 @@ export M2_HOME=/usr/local/maven
 export M2_REPO=$HOME/.m2/repository
 export MAVEN_OPTS="-Dfile.encoding=UTF-8"
 export EDITOR=vim
-export MANPAGER="most -s"
+export MANPAGER="less"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH  #macports requirements
