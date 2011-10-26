@@ -29,7 +29,7 @@ set ignorecase
 
 set nobackup
 set nowritebackup
-set swapfile
+set noswapfile
 
 set list
 set listchars=tab:\ \ 
@@ -186,8 +186,22 @@ function! JavaSetting()
   let java_highlight_functions="indent"
 
   noremap <F1> :update<CR>:make<CR><C-W>
+  vmap \em :call ExtractMethod()<CR>
+  function! ExtractMethod() range  
+    let name = inputdialog("Name of new method:")
+    '<
+    exe "normal! O\<BS>private void " . name ."() {\<Esc>"
+    '>  
+    exe "normal! oreturn ;\<CR>}\<Esc>k"
+    s/return/\/\/ return/ge
+    normal! j%
+    normal! kf( 
+    exe "normal! yyPi// = \<Esc>wdwA;\<Esc>"
+    normal! ==
+    normal! j0w 
+  endfunction
 endfunction
 autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/* call JavaSetting()
 
 " erlang autocmd
-autocmd FileType erlang set makeprg=make\ compile
+autocmd! FileType erlang set makeprg=make\ compile
