@@ -4,7 +4,7 @@ call pathogen#helptags()
 
 syntax on
 filetype plugin indent on
-"colorscheme koehler
+colorscheme koehler
 
 set nocompatible
 set number
@@ -97,6 +97,11 @@ if has('syntax')
     autocmd VimEnter,BufEnter * call ZenkakuSpace()
   augroup END
 endif
+
+" NerdTree
+let NERDTreeShowHidden=1
+let NERDTreeShowBookmarks=1
+let NERDTreeWinSize=60
 
 " neocomplecache
 
