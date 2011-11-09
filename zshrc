@@ -229,6 +229,8 @@ export PATH=$PATH:/usr/local/redis/bin/
 export PATH=$PATH:/usr/local/thrift/bin
 export PATH=$PATH:/usr/local/hadoop/bin
 export PATH=$PATH:/usr/local/kyototycoon/bin
+export PATH=$PATH:/usr/local/riak/bin
+export PATH=$PATH:/usr/local/gtags/bin
 export PATH=$PATH:$ORA_HOME/bin
 
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
@@ -241,6 +243,7 @@ export MANPATH=/opt/local/share/man:$MANPATH
 export MANPATH=/usr/local/rabbitmq/share/man:$MANPATH
 export MANPATH=/usr/local/screen/share/man:$MANPATH
 export MANPATH=/usr/local/erlang/share/man:$MANPATH
+export MANPATH=/usr/local/gtags/share/man:$MANPATH
 
 # zaw https://github.com/zsh-users/zaw
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
