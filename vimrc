@@ -7,7 +7,7 @@ filetype plugin indent on
 colorscheme koehler
 
 set nocompatible
-set number
+"set number
 set autoindent
 set showcmd
 set showmatch
@@ -37,9 +37,9 @@ highlight SpecialKey cterm=underline ctermbg=darkgray guibg=darkgray
 
 " cursorline highlight
 set cursorline
-:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 

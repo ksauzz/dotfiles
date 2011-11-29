@@ -21,7 +21,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn git-flow gem osx ruby rvm)
+plugins=(git svn git-flow gem osx ruby rvm github brew macports)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -180,6 +180,7 @@ alias zsrc='source ~/.zshrc'
 alias javac='javac -J-Dfile.encoding=UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
 #alias jar='jar -Dfile.encoding=UTF-8'
+alias ipgrep="grep -E '[0-9]{1,3}(\.[0-9]{1,3}){3}'"
 
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 
