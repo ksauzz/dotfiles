@@ -99,8 +99,8 @@ if has('syntax')
 endif
 
 " NerdTree
-let NERDTreeShowHidden=1
-let NERDTreeShowBookmarks=1
+"let NERDTreeShowHidden=1
+"let NERDTreeShowBookmarks=1
 let NERDTreeWinSize=60
 
 " neocomplecache

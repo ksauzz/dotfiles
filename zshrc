@@ -245,6 +245,7 @@ export MANPATH=/usr/local/rabbitmq/share/man:$MANPATH
 export MANPATH=/usr/local/screen/share/man:$MANPATH
 export MANPATH=/usr/local/erlang/share/man:$MANPATH
 export MANPATH=/usr/local/gtags/share/man:$MANPATH
+export MANPATH=/usr/local/tig/share/man:$MANPATH
 
 # zaw https://github.com/zsh-users/zaw
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
