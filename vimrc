@@ -207,6 +207,7 @@ function! JavaSetting()
   endfunction
 endfunction
 autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/* call JavaSetting()
+autocmd! BufNewFile,BufRead *.ftl,*.vm,*jsp setfiletype html
 
 " erlang autocmd
 autocmd! FileType erlang set makeprg=make\ compile
