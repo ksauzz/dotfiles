@@ -21,7 +21,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn git-flow gem osx ruby rvm github brew macports)
+plugins=(git svn git-flow gem osx ruby github brew macports)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -136,7 +136,11 @@ if [ "$TERM" = "screen" ]; then
 fi
 
 # rvm configuration
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+#rbenv configuration
+export PATH=~/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 
 # JAVA_HOME 
 expected_java_home=(
@@ -232,6 +236,8 @@ export PATH=$PATH:/usr/local/hadoop/bin
 export PATH=$PATH:/usr/local/kyototycoon/bin
 export PATH=$PATH:/usr/local/riak/bin
 export PATH=$PATH:/usr/local/gtags/bin
+export PATH=$PATH:/usr/local/ruby-build/bin
+
 export PATH=$PATH:$ORA_HOME/bin
 
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
