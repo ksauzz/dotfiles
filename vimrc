@@ -16,6 +16,7 @@ set laststatus=2 " always show status lines.
 set backspace=indent,eol,start
 set ruler
 set visualbell
+set nofoldenable
 
 set tabstop=2
 set shiftwidth=2

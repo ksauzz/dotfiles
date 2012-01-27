@@ -49,3 +49,6 @@
 [submodule "vim/bundle/vim-scouter"]
 	path = vim/bundle/vim-scouter
 	url = https://github.com/thinca/vim-scouter.git
+[submodule "vim/bundle/vimerl"]
+	path = vim/bundle/vimerl
+	url = https://github.com/oscarh/vimerl.git
