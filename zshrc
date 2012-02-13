@@ -170,7 +170,7 @@ alias ls="ls --color"
 esac
 
 alias ll='ls -l'
-alias la='ls -a'
+alias la='ls -al'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
