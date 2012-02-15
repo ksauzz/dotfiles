@@ -238,6 +238,8 @@ export PATH=$PATH:/usr/local/riak/bin
 export PATH=$PATH:/usr/local/gtags/bin
 export PATH=$PATH:/usr/local/ruby-build/bin
 
+export ERL_LIBS=$ERL_LIBS:/usr/local/eqc/
+
 export PATH=$PATH:$ORA_HOME/bin
 
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
