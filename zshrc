@@ -25,16 +25,7 @@ plugins=(git svn git-flow gem osx ruby github brew macports)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-if [ -f ~/.profile ]; then
-	. ~/.profile
-fi
-
 ## Environment variable configuration
-#
-# LANG
-#
-export LANG=ja_JP.UTF-8
 
 # auto change directory
 #
@@ -135,15 +126,9 @@ if [ "$TERM" = "screen" ]; then
   chpwd
 fi
 
-# rvm configuration
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 #rbenv configuration
 export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 # zaw https://github.com/zsh-users/zaw
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
-
-# oracle SQL*Plus setting
-export NLS_LANG='Japanese_Japan.UTF8'

@@ -1,3 +1,9 @@
+# LANG
+export LANG=ja_JP.UTF-8
+
+# oracle SQL*Plus setting
+export NLS_LANG='Japanese_Japan.UTF8'
+
 # JAVA_HOME 
 expected_java_home=(
 /opt/jdk
