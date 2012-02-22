@@ -19,35 +19,6 @@ for dir in $expected_java_home; do
   fi
 done
 
-# User specific aliases and functions
-
-case "${OSTYPE}" in
-freebsd*|darwin*)
-alias ls="ls -G -w"
-alias top="top -o cpu"
-;;
-linux*)
-alias ls="ls --color"
-;;
-esac
-
-alias ll='ls -l'
-alias la='ls -al'
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias v=vim
-alias h=history
-alias diff=colordiff
-alias grep='grep --color=auto'
-alias info='info --vi-keys'
-alias scala='scala -Dfile.encoding=UTF-8'
-alias zsrc='source ~/.zshrc'
-alias javac='javac -J-Dfile.encoding=UTF-8'
-alias java='java -Dfile.encoding=UTF-8'
-#alias jar='jar -Dfile.encoding=UTF-8'
-alias ipgrep="grep -E '[0-9]{1,3}(\.[0-9]{1,3}){3}'"
-
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 
 export LUA_CPATH="/usr/local/lib/luarocks/lib/lua/5.1//?.so;$LUA_PATH"

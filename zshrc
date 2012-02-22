@@ -132,3 +132,5 @@ eval "$(rbenv init -)"
 
 # zaw https://github.com/zsh-users/zaw
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
+
+source ~/dotfiles/zshalias
