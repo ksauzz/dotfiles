@@ -45,6 +45,8 @@ export PATH=/usr/local/memcached/bin:$PATH
 export PATH=$RUBY_HOME/bin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:~/.cabal/bin/
+export PATH=$PATH:/usr/local/macports/bin/
+export PATH=$PATH:/usr/local/macports/sbin/
 export PATH=$PATH:/usr/local/zeromq/bin/
 export PATH=$PATH:/usr/local/bind/sbin
 export PATH=$PATH:/usr/local/mysql/bin
@@ -78,6 +80,7 @@ export PATH=$PATH:$ORA_HOME/bin
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
 
 export MANPATH=~/dotfiles/usr/share/man:$MANPATH
+export MANPATH=/usr/local/macports/share/man:$MANPATH
 export MANPATH=/usr/local/zeromq/share:$MANPATH
 export MANPATH=/usr/local/git/share:$MANPATH
 export MANPATH=/usr/local/mysql/share:$MANPATH
