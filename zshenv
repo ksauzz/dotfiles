@@ -25,6 +25,8 @@ export LUA_CPATH="/usr/local/lib/luarocks/lib/lua/5.1//?.so;$LUA_PATH"
 export LUA_PATH="/usr/local/lib/luarocks/share/lua/5.1//?.lua;$LUA_PATH"
 export LUA_INIT="require 'luarocks.require'"
 
+export PGDATA=/var/lib/postgres/
+
 export RUBY_HOME=/usr/local/ruby
 export ORA_HOME=/usr/local/sqlplus
 export M2_HOME=/usr/local/maven
@@ -36,6 +38,7 @@ export MANPAGER="less"
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH  #macports requirements
 
+export PATH=~/bin:$PATH
 export PATH=~/dotfiles/usr/bin:$PATH
 export PATH=/usr/local/vim/bin:$PATH
 export PATH=/usr/local/ctags/bin:$PATH
@@ -45,8 +48,8 @@ export PATH=/usr/local/memcached/bin:$PATH
 export PATH=$RUBY_HOME/bin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:~/.cabal/bin/
-export PATH=$PATH:/usr/local/macports/bin/
-export PATH=$PATH:/usr/local/macports/sbin/
+export PATH=/usr/local/macports/bin/:$PATH
+export PATH=/usr/local/macports/sbin/:$PATH
 export PATH=$PATH:/usr/local/zeromq/bin/
 export PATH=$PATH:/usr/local/bind/sbin
 export PATH=$PATH:/usr/local/mysql/bin
@@ -57,7 +60,7 @@ export PATH=$PATH:/usr/local/openvpn/sbin
 export PATH=$PATH:/usr/local/clamXav/bin
 export PATH=$PATH:/usr/local/play
 export PATH=$PATH:/usr/local/mercurial/bin
-export PATH=$PATH:/usr/local/sbt/bin
+export PATH=/usr/local/sbt/bin:$PATH
 export PATH=$PATH:/usr/local/tig/bin
 export PATH=$PATH:/usr/local/jmeter/bin
 export PATH=$PATH:/usr/local/mongodb/bin

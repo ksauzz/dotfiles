@@ -134,3 +134,5 @@ eval "$(rbenv init -)"
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
 
 source ~/dotfiles/zshalias
+
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
