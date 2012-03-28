@@ -74,7 +74,6 @@ export PATH=$PATH:/usr/local/hadoop/bin
 export PATH=$PATH:/usr/local/kyototycoon/bin
 export PATH=$PATH:/usr/local/riak/bin
 export PATH=$PATH:/usr/local/gtags/bin
-export PATH=$PATH:/usr/local/ruby-build/bin
 export PATH=$PATH:/usr/local/ejabberd/sbin/
 
 export ERL_LIBS=/usr/local/eqc/

@@ -130,9 +130,12 @@ fi
 export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
+# pythonbrew 
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+
 # zaw https://github.com/zsh-users/zaw
 source ~/dotfiles/zsh/lib/zaw/zaw.zsh
 
 source ~/dotfiles/zshalias
+[[ -s $HOME/dotfiles/zshprofile.local ]] && source $HOME/dotfiles/zshprofile.local
 
-[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
