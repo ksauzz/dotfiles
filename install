@@ -1,9 +1,19 @@
 #!/bin/bash
 
+DOT_FILES=(
+  *rc
+  zshenv
+  vim
+  oh-my-zsh
+  rst2pdf
+  my.cnf
+  ctags
+  tigrc
+)
+
 make_slink(){
-  PWD=`pwd`
   echo install dotfiles.
-  for file in *rc zshenv vim oh-my-zsh rst2pdf my.cnf ctags tigrc ; do
+  for file in  ${DOT_FILES[@]}; do
     if [ -e ~/.$file ]; then
       echo "~/.$file is exist"
     else
