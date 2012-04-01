@@ -211,5 +211,11 @@ autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/res
 autocmd! BufNewFile,BufRead *.ftl,*.vm,*jsp setfiletype html
 
 " Erlang configuration
-autocmd! FileType erlang set makeprg=make\ compile
-autocmd! BufNewFile,BufRead *.app.src setfiletype erlang
+function! ErlangSetting()
+  set tabstop=4
+  set shiftwidth=4
+  set softtabstop=4
+  set makeprg=make\ compil
+endfunction
+autocmd! BufNewFile,BufRead *.app.src,rebar.config setfiletype erlang
+autocmd! FileType erlang call ErlangSetting()
