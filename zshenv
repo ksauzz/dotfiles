@@ -63,6 +63,7 @@ export PATH=$PATH:/usr/local/clamXav/bin
 export PATH=$PATH:/usr/local/play
 export PATH=$PATH:/usr/local/mercurial/bin
 export PATH=/usr/local/sbt/bin:$PATH
+export PATH=/usr/local/sbt7/bin:$PATH
 export PATH=$PATH:/usr/local/tig/bin
 export PATH=$PATH:/usr/local/jmeter/bin
 export PATH=$PATH:/usr/local/mongodb/bin
