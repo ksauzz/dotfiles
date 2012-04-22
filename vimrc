@@ -180,6 +180,15 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
+" smartchr
+inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
+inoremap <expr> , smartchr#one_of(', ', ',')
+inoremap <expr> ,<CR> smartchr#one_of(',<CR>')
+inoremap <expr> => smartchr#one_of(' => ')
+inoremap <expr> =><CR> smartchr#one_of(' =><CR>')
+inoremap <expr> -> smartchr#one_of(' -> ')
+inoremap <expr> -><CR> smartchr#one_of(' -><CR>')
+
 " Java autocmd
 function! JavaSetting()
   set noexpandtab
