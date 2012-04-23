@@ -215,7 +215,7 @@ function! ErlangSetting()
   set tabstop=4
   set shiftwidth=4
   set softtabstop=4
-  set makeprg=make\ compil
+  set makeprg=make\ compile
 endfunction
 autocmd! BufNewFile,BufRead *.app.src,rebar.config setfiletype erlang
 autocmd! FileType erlang call ErlangSetting()
