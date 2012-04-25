@@ -142,3 +142,4 @@ safety_source() {
 safety_source $HOME/dotfiles/zshprofile.local
 safety_source $HOME/.pythonbrew/etc/bashrc
 safety_source $HOME/.perlbrew/etc/bashrc
+safety_source $HOME/.scm_breeze/scm_breeze.sh
