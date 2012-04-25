@@ -1,12 +1,41 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set nocompatible
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdcommenter.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-rails.git'
+Bundle 'ujihisa/quickrun.git'
+Bundle 'msanders/snipmate.vim.git'
+Bundle 'thinca/vim-ref.git'
+Bundle 'Shougo/unite.vim.git'
+Bundle 'Shougo/neocomplcache.git'
+Bundle 'vim-scripts/EasyMotion.git'
+Bundle 'Shougo/vimshell.git'
+Bundle 'Shougo/vimproc.git'
+Bundle 'motemen/git-vim.git'
+Bundle 'pix/vim-align.git'
+Bundle 'thinca/vim-scouter.git'
+Bundle 'oscarh/vimerl.git'
+Bundle 'kana/vim-smartchr.git'
+Bundle 'kana/vim-smartinput.git'
+Bundle 'ksauzz/thrift.vim.git'
+Bundle 'ksauzz/gtags-vim.git'
+Bundle 'ksauzz/scala-vim.git'
 
 syntax on
 filetype plugin indent on
 colorscheme koehler
 
-set nocompatible
 "set number
 set autoindent
 set showcmd
