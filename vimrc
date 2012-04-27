@@ -60,7 +60,7 @@ set nowritebackup
 set noswapfile
 
 set list
-set listchars=tab:\ \ 
+set listchars=tab:\_\_,trail:_
 highlight SpecialKey cterm=underline ctermbg=darkgray guibg=darkgray
 
 " cursorline highlight
