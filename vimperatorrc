@@ -24,4 +24,4 @@ map l gt
 map <Left>  gT
 map <Right>  gt
 
-
+" vim: filetype=vim

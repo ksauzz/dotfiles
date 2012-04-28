@@ -126,6 +126,10 @@ if [ "$TERM" = "screen" ]; then
   chpwd
 fi
 
+watchmvn(){
+  watchmedo shell-command --patterns="*.java" --recursive --wait --command="mvn compile -o"
+}
+
 #rbenv configuration
 export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init -)"

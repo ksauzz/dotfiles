@@ -8,3 +8,5 @@ alias diff=colordiff
 alias grep='grep --color=auto'
 alias info='info --vi-keys'
 alias scala='scala -Dfile.encoding=UTF-8'
+
+" vim: filetype=vim

@@ -5,6 +5,7 @@ case "${OSTYPE}" in
     alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
     alias ls="ls -G -w"
     alias top="top -o cpu"
+    alias rbenv='CONFIGURE_OPTS="--with-readline-dir=/usr/local" rbenv'
     ;;
   linux*)
     alias ls="ls --color"
