@@ -23,6 +23,12 @@ export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 
 export PERLBREW_ROOT=~/.perlbrew
 
+# Macports
+export PORTS_HOME=/usr/local/macports
+export PATH=$PORTS_HOME/bin:$PORTS_HOME/sbin:$PATH
+export MANPATH=$PORTS_HOME/share/man:$MANPATH
+
+# LUA
 export LUA_CPATH="/usr/local/lib/luarocks/lib/lua/5.1//?.so;$LUA_PATH"
 export LUA_PATH="/usr/local/lib/luarocks/share/lua/5.1//?.lua;$LUA_PATH"
 export LUA_INIT="require 'luarocks.require'"
@@ -38,7 +44,6 @@ export EDITOR=vim
 export MANPAGER="less"
 
 export PATH=/usr/local/bin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH  #macports requirements
 
 export PATH=~/bin:$PATH
 export PATH=~/dotfiles/usr/bin:$PATH
@@ -51,8 +56,6 @@ export PATH=/usr/local/Cellar/ccache/3.1.6/libexec:$PATH
 export PATH=$RUBY_HOME/bin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:~/.cabal/bin/
-export PATH=/usr/local/macports/bin/:$PATH
-export PATH=/usr/local/macports/sbin/:$PATH
 export PATH=$PATH:/usr/local/zeromq/bin/
 export PATH=$PATH:/usr/local/bind/sbin
 export PATH=$PATH:/usr/local/mysql/bin
@@ -87,7 +90,6 @@ export PATH=$PATH:$ORA_HOME/bin
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
 
 export MANPATH=~/dotfiles/usr/share/man:$MANPATH
-export MANPATH=/usr/local/macports/share/man:$MANPATH
 export MANPATH=/usr/local/zeromq/share:$MANPATH
 export MANPATH=/usr/local/git/share:$MANPATH
 export MANPATH=/usr/local/mysql/share:$MANPATH
