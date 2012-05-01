@@ -89,11 +89,12 @@ export PATH=$PATH:$ORA_HOME/bin
 
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
 
+export MANPATH=/usr/share/man:$MANPATH
+export MANPATH=/usr/local/share/man:$MANPATH
 export MANPATH=~/dotfiles/usr/share/man:$MANPATH
 export MANPATH=/usr/local/zeromq/share:$MANPATH
 export MANPATH=/usr/local/git/share:$MANPATH
 export MANPATH=/usr/local/mysql/share:$MANPATH
-export MANPATH=/opt/local/share/man:$MANPATH
 export MANPATH=/usr/local/rabbitmq/share/man:$MANPATH
 export MANPATH=/usr/local/screen/share/man:$MANPATH
 export MANPATH=/usr/local/erlang/share/man:$MANPATH
