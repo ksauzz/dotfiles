@@ -1,29 +1,21 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+## Function section.
+function watchmvn {
+  watchmedo shell-command --patterns="*.java" --recursive --wait --command="mvn compile -o" $*
+}
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-export ZSH_THEME="dst"
+function watcherl {
+  watchmedo shell-command --patterns="*.hrl;*.erl" --recursive --wait --command="./rebar compile" $*
+}
 
-# Set to this to use case-sensitive completion
-export CASE_SENSITIVE="true"
+function safety_source {
+  if [[ -s $1 ]];then
+    source $1
+  else
+    echo "zsh: [WARN] $1 not found..."
+  fi
+}
 
-# Comment this out to disable weekly auto-update checks
-export DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn git-flow gem osx ruby github brew macports)
-
-source $ZSH/oh-my-zsh.sh
+safety_source $HOME/dotfiles/oh-my-zshrc
 
 ## Environment variable configuration
 
@@ -84,7 +76,7 @@ kterm*|xterm)
         echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
     }
     ;;
-esac 
+esac
 
 # set terminal title for GNU screen
 #
@@ -126,22 +118,14 @@ if [ "$TERM" = "screen" ]; then
   chpwd
 fi
 
-watchmvn(){
-  watchmedo shell-command --patterns="*.java" --recursive --wait --command="mvn compile -o"
-}
-
-#rbenv configuration
+## rbenv configuration
 export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 # zaw https://github.com/zsh-users/zaw
-source ~/dotfiles/zsh/lib/zaw/zaw.zsh
+safety_source ~/dotfiles/zsh/lib/zaw/zaw.zsh
 
-source ~/dotfiles/zshalias
-
-safety_source() {
-  [[ -s $1 ]] && source $1
-}
+safety_source ~/dotfiles/zshalias
 
 safety_source $HOME/dotfiles/zshprofile.local
 safety_source $HOME/.pythonbrew/etc/bashrc
