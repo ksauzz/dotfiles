@@ -30,6 +30,8 @@ Bundle 'ksauzz/thrift.vim.git'
 Bundle 'ksauzz/gtags-vim.git'
 Bundle 'ksauzz/scala-vim.git'
 
+let g:vundle_default_git_proto='git'
+
 syntax on
 filetype plugin indent on
 colorscheme koehler
