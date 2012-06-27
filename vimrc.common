@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree.git'
@@ -62,11 +62,16 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+"----------------------------------------------------
+" Specialkey highlight
+"----------------------------------------------------
 set list
 set listchars=tab:\_\_,trail:_
 highlight SpecialKey cterm=underline ctermbg=darkgray guibg=darkgray
 
+"----------------------------------------------------
 " cursorline highlight
+"----------------------------------------------------
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -86,6 +91,9 @@ let g:quickrun_config = {
       \   'running_mark': 'running quickrun... (  ﾟДﾟ)',
       \   'into': '1',
       \ },
+      \ 'ruby': {
+      \   'command': 'rbenv exec ruby',
+      \ }, 
       \ 'erlang': {
       \   'command': 'make',
       \   'exec': ['echo %c compile eunit', '%c compile eunit'] },
@@ -116,7 +124,9 @@ nnoremap ;; :Unite<Space>
 nnoremap ;b :Unite buffer<Return>
 nnoremap ;t :Unite tab<Return>
 
+"----------------------------------------------------
 " ZenkakuSpace highlight
+"----------------------------------------------------
 if has('syntax')
   syntax enable
   function! ZenkakuSpace()
@@ -129,13 +139,16 @@ if has('syntax')
   augroup END
 endif
 
+"----------------------------------------------------
 " NerdTree
+"----------------------------------------------------
 "let NERDTreeShowHidden=1
 "let NERDTreeShowBookmarks=1
 let NERDTreeWinSize=60
 
+"----------------------------------------------------
 " neocomplecache
-
+"----------------------------------------------------
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplcache.
@@ -210,8 +223,10 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
+"----------------------------------------------------
 " smartchr
-inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
+"----------------------------------------------------
+inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ')
 inoremap <expr> , smartchr#one_of(', ', ',')
 inoremap <expr> ,<CR> smartchr#one_of(',<CR>')
 inoremap <expr> => smartchr#one_of(' => ')
@@ -219,7 +234,20 @@ inoremap <expr> =><CR> smartchr#one_of(' =><CR>')
 inoremap <expr> -> smartchr#one_of(' -> ')
 inoremap <expr> -><CR> smartchr#one_of(' -><CR>')
 
+"----------------------------------------------------
+" GNU GLOBAL(gtags)
+"----------------------------------------------------
+nmap <C-q> <C-w><C-w><C-w>q
+nmap <C-g> :Gtags -g 
+nmap <C-l> :Gtags -f %<CR>
+nmap <C-j> :Gtags <C-r><C-w><CR>
+nmap <C-k> :Gtags -r <C-r><C-w><CR>
+"nmap <C-n> :cn<CR>
+"nmap <C-p> :cp<CR>
+
+"----------------------------------------------------
 " Java autocmd
+"----------------------------------------------------
 function! JavaSetting()
   set noexpandtab
 
@@ -249,7 +277,9 @@ endfunction
 autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/* call JavaSetting()
 autocmd! BufNewFile,BufRead *.ftl,*.vm,*jsp setfiletype html
 
+"----------------------------------------------------
 " Erlang configuration
+"----------------------------------------------------
 function! ErlangSetting()
   set tabstop=4
   set shiftwidth=4

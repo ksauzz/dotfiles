@@ -4,7 +4,7 @@ export LANG=ja_JP.UTF-8
 # oracle SQL*Plus setting
 export NLS_LANG='Japanese_Japan.UTF8'
 
-# JAVA_HOME 
+# JAVA_HOME
 expected_java_home=(
 /opt/jdk
 /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
@@ -82,12 +82,15 @@ export PATH=$PATH:/usr/local/kyototycoon/bin
 export PATH=$PATH:/usr/local/riak/bin
 export PATH=$PATH:/usr/local/gtags/bin
 export PATH=$PATH:/usr/local/ejabberd/sbin/
+export PATH=$PATH:/usr/local/zeromq/share
 
 export ERL_LIBS=/usr/local/eqc/
 
 export PATH=$PATH:$ORA_HOME/bin
 
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zmq/lib
 
 export MANPATH=/usr/share/man:$MANPATH
 export MANPATH=/usr/local/share/man:$MANPATH
@@ -100,3 +103,4 @@ export MANPATH=/usr/local/screen/share/man:$MANPATH
 export MANPATH=/usr/local/erlang/share/man:$MANPATH
 export MANPATH=/usr/local/gtags/share/man:$MANPATH
 export MANPATH=/usr/local/tig/share/man:$MANPATH
+export MANPATH=/usr/local/zmq/share/man:$MANPATH
