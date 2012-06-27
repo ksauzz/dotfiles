@@ -54,6 +54,8 @@ make_vimproc(){
   cd $PWD
 }
 
+git submodule update --init
+vim +BundleInstall +:q +:q
 make_slink
 configure_gitignore
 make_vimproc
