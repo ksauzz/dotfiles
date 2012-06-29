@@ -30,12 +30,18 @@ Bundle 'kana/vim-smartinput.git'
 Bundle 'ksauzz/thrift.vim.git'
 Bundle 'ksauzz/gtags-vim.git'
 Bundle 'ksauzz/scala-vim.git'
+Bundle 'Lokaltog/vim-powerline.git'
 
 let g:vundle_default_git_proto='git'
 
+" vim-powerline
+let g:Powerline_symbols='fancy'
+set encoding=utf-8
+set t_Co=256
+
 syntax on
 filetype plugin indent on
-colorscheme koehler
+colorscheme darkblue
 
 "set number
 set autoindent
