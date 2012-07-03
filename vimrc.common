@@ -131,6 +131,9 @@ nnoremap ;; :Unite<Space>
 nnoremap ;b :Unite buffer<Return>
 nnoremap ;t :Unite tab<Return>
 
+nnoremap j gj
+nnoremap k gk
+
 "----------------------------------------------------
 " ZenkakuSpace highlight
 "----------------------------------------------------
