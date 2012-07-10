@@ -69,6 +69,7 @@ setopt share_history        # share command history data
 ## Completion configuration
 #
 fpath=(~/dotfiles/zsh/completion $fpath)
+fpath=(~/dotfiles/zsh/lib/zsh-completions $fpath)
 autoload -U compinit
 compinit
 
@@ -128,6 +129,9 @@ eval "$(rbenv init -)"
 
 # zaw https://github.com/zsh-users/zaw
 safety_source ~/dotfiles/zsh/lib/zaw/zaw.zsh
+
+# https://github.com/zsh-users/zsh-syntax-highlighting
+safety_source ~/dotfiles/zsh/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 safety_source ~/dotfiles/zshalias
 

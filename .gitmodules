@@ -7,3 +7,9 @@
 [submodule "vim/bundle/vundle"]
 	path = vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
+[submodule "zsh/lib/zsh-syntax-highlighting"]
+	path = zsh/lib/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/lib/zsh-completions"]
+	path = zsh/lib/zsh-completions
+	url = git://github.com/zsh-users/zsh-completions.git
