@@ -130,6 +130,7 @@ nnoremap <F3> :QuickRun<Return>
 nnoremap ;; :Unite<Space>
 nnoremap ;b :Unite buffer<Return>
 nnoremap ;t :Unite tab<Return>
+nnoremap ;f :Unite file_mru<Return>
 
 nnoremap j gj
 nnoremap k gk
@@ -296,5 +297,5 @@ function! ErlangSetting()
   set softtabstop=4
   set makeprg=make\ compile
 endfunction
-autocmd! BufNewFile,BufRead *.app.src,rebar.config setfiletype erlang
+autocmd! BufNewFile,BufRead *.app.src,rebar.config,reltool.config,sys.config,app.config setfiletype erlang
 autocmd! FileType erlang call ErlangSetting()
