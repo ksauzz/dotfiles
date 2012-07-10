@@ -7,6 +7,10 @@ function watcherl {
   watchmedo shell-command --patterns="*.hrl;*.erl" --recursive --wait --command="./rebar compile" $*
 }
 
+function ack_vim {
+  vim $(ack -g $@)
+}
+
 function safety_source {
   if [[ -s $1 ]];then
     source $1

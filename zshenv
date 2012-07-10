@@ -83,6 +83,7 @@ export PATH=$PATH:/usr/local/riak/bin
 export PATH=$PATH:/usr/local/gtags/bin
 export PATH=$PATH:/usr/local/ejabberd/sbin/
 export PATH=$PATH:/usr/local/zeromq/share
+export PATH=$PATH:/usr/local/homebrew/bin
 
 export ERL_LIBS=/usr/local/eqc/
 
