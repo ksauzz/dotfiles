@@ -1,3 +1,7 @@
+## rbenv configuration
+export PATH=~/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
 # LANG
 export LANG=ja_JP.UTF-8
 

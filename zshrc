@@ -123,10 +123,6 @@ if [ "$TERM" = "screen" ]; then
   chpwd
 fi
 
-## rbenv configuration
-export PATH=~/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
-
 # zaw https://github.com/zsh-users/zaw
 safety_source ~/dotfiles/zsh/lib/zaw/zaw.zsh
 

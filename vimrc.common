@@ -98,9 +98,6 @@ let g:quickrun_config = {
       \   'running_mark': 'running quickrun... (  ﾟДﾟ)',
       \   'into': '1',
       \ },
-      \ 'ruby': {
-      \   'command': 'rbenv exec ruby',
-      \ }, 
       \ 'erlang': {
       \   'command': 'make',
       \   'exec': ['echo %c compile eunit', '%c compile eunit'] },
