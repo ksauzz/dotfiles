@@ -33,6 +33,9 @@ Bundle 'ksauzz/scala-vim.git'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'banyan/recognize_charcode.vim'
 Bundle 'mileszs/ack.vim.git'
+Bundle 'tpope/vim-haml.git'
+Bundle 'edsono/vim-matchit.git'
+Bundle 'ecomba/vim-ruby-refactoring.git'
 
 let g:vundle_default_git_proto='git'
 
