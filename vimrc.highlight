@@ -1,0 +1,33 @@
+" vim: filetype=vim
+
+"----------------------------------------------------
+" Specialkey highlight
+"----------------------------------------------------
+set list
+set listchars=tab:\_\_,trail:_
+highlight SpecialKey cterm=underline ctermbg=darkgray guibg=darkgray
+
+"----------------------------------------------------
+" cursorline highlight
+"----------------------------------------------------
+set cursorline
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
+"----------------------------------------------------
+" ZenkakuSpace highlight
+"----------------------------------------------------
+if has('syntax')
+  syntax enable
+  function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=underline ctermfg=red gui=underline guifg=red
+    silent! match ZenkakuSpace /　/
+  endfunction
+  augroup ZenkakuSpace
+    autocmd!
+    autocmd VimEnter,BufEnter * call ZenkakuSpace()
+  augroup END
+endif

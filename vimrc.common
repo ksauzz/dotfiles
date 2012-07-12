@@ -35,25 +35,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-"----------------------------------------------------
-" Specialkey highlight
-"----------------------------------------------------
-set list
-set listchars=tab:\_\_,trail:_
-highlight SpecialKey cterm=underline ctermbg=darkgray guibg=darkgray
-
-"----------------------------------------------------
-" cursorline highlight
-"----------------------------------------------------
-set cursorline
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-
-
-
 setlocal omnifunc=syntaxcomplete#Complete
 set pastetoggle=<F11>
 
@@ -99,31 +80,11 @@ nnoremap j gj
 nnoremap k gk
 
 "----------------------------------------------------
-" ZenkakuSpace highlight
-"----------------------------------------------------
-if has('syntax')
-  syntax enable
-  function! ZenkakuSpace()
-    highlight ZenkakuSpace cterm=underline ctermfg=red gui=underline guifg=red
-    silent! match ZenkakuSpace /　/
-  endfunction
-  augroup ZenkakuSpace
-    autocmd!
-    autocmd VimEnter,BufEnter * call ZenkakuSpace()
-  augroup END
-endif
-
-"----------------------------------------------------
 " NerdTree
 "----------------------------------------------------
 "let NERDTreeShowHidden=1
 "let NERDTreeShowBookmarks=1
 let NERDTreeWinSize=60
-
-"----------------------------------------------------
-" Neocomplecache
-"----------------------------------------------------
-source ~/dotfiles/vimrc.neocomplecache
 
 "----------------------------------------------------
 " smartchr
@@ -150,5 +111,7 @@ nmap <C-k> :Gtags -r <C-r><C-w><CR>
 "----------------------------------------------------
 " Programming Language Settings
 "----------------------------------------------------
+source ~/dotfiles/vimrc.highlight
 source ~/dotfiles/vimrc.lang
+source ~/dotfiles/vimrc.neocomplecache
 
