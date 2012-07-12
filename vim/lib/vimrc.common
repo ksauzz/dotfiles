@@ -1,5 +1,5 @@
 " vim: filetype=vim
-source ~/dotfiles/vimrc.vundle
+source ~/dotfiles/vim/lib/vimrc.vundle
 
 syntax on
 filetype plugin indent on
@@ -59,8 +59,8 @@ nnoremap k gk
 "----------------------------------------------------
 " external resource
 "----------------------------------------------------
-source ~/dotfiles/vimrc.plugins
-source ~/dotfiles/vimrc.neocomplecache
-source ~/dotfiles/vimrc.highlight
-source ~/dotfiles/vimrc.lang
+source ~/dotfiles/vim/lib/vimrc.plugins
+source ~/dotfiles/vim/lib/vimrc.neocomplecache
+source ~/dotfiles/vim/lib/vimrc.highlight
+source ~/dotfiles/vim/lib/vimrc.lang
 

@@ -60,10 +60,3 @@ let g:Powerline_symbols='fancy'
 set encoding=utf-8
 set t_Co=256
 
-"----------------------------------------------------
-" Programming Language Settings
-"----------------------------------------------------
-source ~/dotfiles/vimrc.highlight
-source ~/dotfiles/vimrc.lang
-source ~/dotfiles/vimrc.neocomplecache
-

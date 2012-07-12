@@ -1,4 +1,4 @@
-source ~/dotfiles/vimrc.common
+source ~/dotfiles/vim/lib/vimrc.common
 
 colorscheme evening
 set guifont=Ricty\ for\ Powerline:h14
