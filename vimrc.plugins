@@ -1,0 +1,69 @@
+" vim: filetype=vim
+
+"----------------------------------------------------
+" Unite
+"----------------------------------------------------
+nnoremap ;; :Unite<Space>
+nnoremap ;b :Unite buffer<Return>
+nnoremap ;t :Unite tab<Return>
+nnoremap ;f :Unite file_mru<Return>
+
+"----------------------------------------------------
+" QuickRun
+"----------------------------------------------------
+let g:quickrun_config = {
+      \ '*': {
+      \   'split': '',
+      \   'running_mark': 'running quickrun... (  ﾟДﾟ)',
+      \   'into': '1',
+      \ },
+      \ 'erlang': {
+      \   'command': 'make',
+      \   'exec': ['echo %c compile eunit', '%c compile eunit'] },
+      \ }
+nnoremap <F3> :QuickRun<Return>
+
+"----------------------------------------------------
+" NerdTree
+"----------------------------------------------------
+"let NERDTreeShowHidden=1
+"let NERDTreeShowBookmarks=1
+let NERDTreeWinSize=60
+nnoremap <F2> :NERDTreeToggle<Return>
+
+"----------------------------------------------------
+" smartchr
+"----------------------------------------------------
+inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ')
+inoremap <expr> , smartchr#one_of(', ', ',')
+inoremap <expr> ,<CR> smartchr#one_of(',<CR>')
+inoremap <expr> => smartchr#one_of(' => ')
+inoremap <expr> =><CR> smartchr#one_of(' =><CR>')
+inoremap <expr> -> smartchr#one_of(' -> ')
+inoremap <expr> -><CR> smartchr#one_of(' -><CR>')
+
+"----------------------------------------------------
+" GNU GLOBAL(gtags)
+"----------------------------------------------------
+nmap <C-q> <C-w><C-w><C-w>q
+nmap <C-g> :Gtags -g 
+nmap <C-l> :Gtags -f %<CR>
+nmap <C-j> :Gtags <C-r><C-w><CR>
+nmap <C-k> :Gtags -r <C-r><C-w><CR>
+"nmap <C-n> :cn<CR>
+"nmap <C-p> :cp<CR>
+
+"----------------------------------------------------
+" vim-powerline
+"----------------------------------------------------
+let g:Powerline_symbols='fancy'
+set encoding=utf-8
+set t_Co=256
+
+"----------------------------------------------------
+" Programming Language Settings
+"----------------------------------------------------
+source ~/dotfiles/vimrc.highlight
+source ~/dotfiles/vimrc.lang
+source ~/dotfiles/vimrc.neocomplecache
+
