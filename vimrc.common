@@ -148,45 +148,7 @@ nmap <C-k> :Gtags -r <C-r><C-w><CR>
 "nmap <C-p> :cp<CR>
 
 "----------------------------------------------------
-" Java autocmd
+" Programming Language Settings
 "----------------------------------------------------
-function! JavaSetting()
-  set noexpandtab
+source ~/dotfiles/vimrc.lang
 
-  compiler ant 
-  set makeprg=mvn\ compile
-
-  let java_mark_braces_in_parens_as_errors=1
-  let java_highlight_java_all=1
-  let java_highlight_functions="indent"
-
-  noremap <F1> :update<CR>:make<CR><C-W>
-  vmap \em :call ExtractMethod()<CR>
-  function! ExtractMethod() range  
-    let name = inputdialog("Name of new method:")
-    '<
-    exe "normal! O\<BS>private void " . name ."() {\<Esc>"
-    '>  
-    exe "normal! oreturn ;\<CR>}\<Esc>k"
-    s/return/\/\/ return/ge
-    normal! j%
-    normal! kf( 
-    exe "normal! yyPi// = \<Esc>wdwA;\<Esc>"
-    normal! ==
-    normal! j0w 
-  endfunction
-endfunction
-autocmd! BufNewFile,BufRead *.java,pom.xml,*/src/main/resources/*,*/src/test/resources/*,*/src/main/webapp/* call JavaSetting()
-autocmd! BufNewFile,BufRead *.ftl,*.vm,*jsp setfiletype html
-
-"----------------------------------------------------
-" Erlang configuration
-"----------------------------------------------------
-function! ErlangSetting()
-  set tabstop=4
-  set shiftwidth=4
-  set softtabstop=4
-  set makeprg=make\ compile
-endfunction
-autocmd! BufNewFile,BufRead *.app.src,rebar.config,reltool.config,sys.config,app.config setfiletype erlang
-autocmd! FileType erlang call ErlangSetting()
