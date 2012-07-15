@@ -6,7 +6,6 @@ DOT_FILES=(
   *rc
   zshenv
   vim
-  oh-my-zsh
   rst2pdf
   my.cnf
   ctags
