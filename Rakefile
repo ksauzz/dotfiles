@@ -40,23 +40,26 @@ desc "make vimproc"
 task :make_vimproc do
   ostype = `echo $OSTYPE`
   if ostype.match /^free|^darwin/
-    makefile = "#{VIM_PROC_DIR}/make_mac_mak"
-    libfile = "#{VIM_PROC_DIR}/autoload/vimproc_mac.so"
+    makefile = "make_mac.mak"
+    libfile = "vimproc_mac.so"
   elsif ostype.match /^linux/
-    makefile = "#{VIM_PROC_DIR}/make_unix_mak"
-    libfile = "#{VIM_PROC_DIR}/autoload/vimproc_unix.so"
+    makefile = "make_gcc.mak"
+    libfile = "vimproc_unix.so"
   end
 
   if makefile.nil?
     puts "unknown OSTYPE(#{ostype})"
     next
   end
-  if File.exists? libfile
+  if File.exists? "#{VIM_PROC_DIR}/autoload/#{libfile}"
     puts "#{libfile} already exists."
     next
   end
 
-  sh %(make -f #{makefile})
+  sh %(
+        cd #{VIM_PROC_DIR}
+        make -f #{makefile}
+      )
 end
 
 desc "run all tasks."
