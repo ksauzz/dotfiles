@@ -16,7 +16,8 @@ map <C-c> Y
 map <C-g> YP
 "noremap <C-v> <C-v><C-v>
 
-unmap <C-v>
+map <Up> k
+map <Down> j
 
 " H/L や ← → でタブ移動
 map h gT
