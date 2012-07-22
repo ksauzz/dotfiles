@@ -1,5 +1,7 @@
-"ブックマークツールバーの表示
-set guioptions=B
+" ツールバー設定
+"set toolbars=menu,navigation,bookmarks,addons
+set toolbars=nomenu,nonavigation,bookmarks,addons
+
 "ブラウザタイトルの変更
 set titlestring=Firefox
 
@@ -7,22 +9,35 @@ set titlestring=Firefox
 set visualbell
 hi Bell display: none;
 
-"j/kの移動量を5倍に
+"j/kの移動量を増加
 map j 7<C-e>
 map k 7<C-y>
+
 " 選択文字列のコピーを <C-c> に割り当て
 map <C-c> Y
+
 " 選択文字列のgoogle検索を <C-g> に割り当て
 map <C-g> YP
-"noremap <C-v> <C-v><C-v>
 
+" ↑↓で設定ダイアログが表示される挙動に対する暫定措
 map <Up> k
 map <Down> j
 
-" H/L や ← → でタブ移動
+" H/L や ← → でタブ移
 map h gT
 map l gt
 map <Left>  gT
 map <Right>  gt
 
-" vim: filetype=vim
+" 補完リストの選択をC-n,C-pで上下移動
+cmap <C-n> <TAB>
+cmap <C-p> <S-TAB>
+
+
+" Shift + ← → で現在のタブの位置変更
+map <S-Right> :tabmove! +1<CR>
+map <S-Left>  :tabmove! -1<CR>
+
+map <C-h> :help 
+
+" vim: ft=vim
