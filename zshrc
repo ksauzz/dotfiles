@@ -11,6 +11,10 @@ function ack_vim {
   vim $(ack -g $@)
 }
 
+function cvs-diff {
+  cvs diff -bup "$@" | colordiff | less -R
+}
+
 function safety_source {
   if [[ -s $1 ]];then
     source $1
