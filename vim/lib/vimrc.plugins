@@ -28,6 +28,7 @@ nnoremap <F3> :QuickRun<Return>
 "----------------------------------------------------
 "let NERDTreeShowHidden=1
 "let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\CVS$']
 let NERDTreeWinSize=60
 nnoremap <F2> :NERDTreeToggle<Return>
 
