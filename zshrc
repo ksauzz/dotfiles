@@ -12,7 +12,11 @@ function ack_vim {
 }
 
 function cvs-diff {
-  cvs diff -bup "$@" | colordiff | less -R
+  cvs diff -Nbup "$@" | colordiff | less -R
+}
+
+function _whois {
+  whois "$@" | nkf
 }
 
 function safety_source {

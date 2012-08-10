@@ -18,6 +18,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias v=vim
+alias view='vim -R'
+alias whois=_whois
 alias h=history
 alias diff=colordiff
 alias grep='grep --color=auto'
