@@ -36,5 +36,7 @@ Bundle 'mileszs/ack.vim.git'
 Bundle 'tpope/vim-haml.git'
 Bundle 'edsono/vim-matchit.git'
 Bundle 'ecomba/vim-ruby-refactoring.git'
+Bundle 'h1mesuke/unite-outline.git'
+Bundle 'vim-scripts/sudo.vim'
 
 let g:vundle_default_git_proto='git'
