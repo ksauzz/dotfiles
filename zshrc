@@ -28,6 +28,7 @@ function safety_source {
 }
 
 safety_source $HOME/dotfiles/oh-my-zshrc
+safety_source $(brew --prefix autojump)/etc/autojump
 
 ## Environment variable configuration
 
@@ -78,6 +79,7 @@ setopt share_history        # share command history data
 #
 fpath=(~/dotfiles/zsh/completion $fpath)
 fpath=(~/dotfiles/zsh/lib/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh/site-functions $fpath)
 autoload -U compinit
 compinit
 
