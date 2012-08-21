@@ -37,6 +37,9 @@ export LUA_CPATH="/usr/local/lib/luarocks/lib/lua/5.1//?.so;$LUA_PATH"
 export LUA_PATH="/usr/local/lib/luarocks/share/lua/5.1//?.lua;$LUA_PATH"
 export LUA_INIT="require 'luarocks.require'"
 
+# autojump
+export AUTOJUMP_KEEP_SYMLINKS=1
+
 export PGDATA=/var/lib/postgres/
 
 export RUBY_HOME=/usr/local/ruby
