@@ -1,6 +1,7 @@
 #!/usr/bin/env rake
 
 DOT_FILES = FileList.new %w(*rc zshenv vim rst2pdf my.cnf ctags)
+dirname = File.expand_path File.dirname(__FILE__)
 
 desc "make symbolic links of dotfile."
 task :make_symbolic_link do
@@ -10,7 +11,7 @@ task :make_symbolic_link do
       puts "#{link} already exists."
       next
     end
-    sh %(ln -vs #{file} #{link})
+    sh %(ln -vs #{dirname}/#{file} #{link})
   end
 end
 
@@ -31,19 +32,19 @@ task :configure_gitignore do
     puts ".gitignore already configured."
     next
   end
-  sh %(echo doc/tags >> $GITIGNORE)
-  sh %(echo doc/tags-ja >> $GITIGNORE)
+  sh %(echo doc/tags >> #{GITIGNORE})
+  sh %(echo doc/tags-ja >> #{GITIGNORE})
 end
 
 VIM_PROC_DIR = 'vim/bundle/vimproc'
 desc "make vimproc"
 task :make_vimproc do
-  ostype = `echo $OSTYPE`
+  ostype = RbConfig::CONFIG['host_os']
   if ostype.match /^free|^darwin/
     makefile = "make_mac.mak"
     libfile = "vimproc_mac.so"
   elsif ostype.match /^linux/
-    makefile = "make_gcc.mak"
+    makefile = "make_unix.mak"
     libfile = "vimproc_unix.so"
   end
 
