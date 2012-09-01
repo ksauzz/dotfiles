@@ -1,6 +1,6 @@
 #!/usr/bin/env rake
 
-DOT_FILES = FileList.new %w(*rc zshenv vim rst2pdf my.cnf ctags)
+DOT_FILES = FileList.new %w(*rc zshenv vim rst2pdf my.cnf ctags tmux.conf)
 dirname = File.expand_path File.dirname(__FILE__)
 
 desc "make symbolic links of dotfile."
