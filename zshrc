@@ -1,3 +1,9 @@
+# launching tmux by default.
+if [[ "$TERM" != "screen-256color" ]] then
+  tmux attach-session -t "$USER" || tmux new-session -s "$USER"
+  exit
+fi
+
 ## Function section.
 function watchmvn {
   watchmedo shell-command --patterns="*.java" --recursive --wait --command="mvn compile -o" $*
