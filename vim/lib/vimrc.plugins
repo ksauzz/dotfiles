@@ -62,3 +62,10 @@ let g:Powerline_symbols='fancy'
 set encoding=utf-8
 set t_Co=256
 
+"----------------------------------------------------
+" syntastic
+"----------------------------------------------------
+let g:syntastic_mode_map = { 'mode': 'active',
+                             \'active_filetypes': [],
+                             \'passive_filetypes': ['java'] }
+
