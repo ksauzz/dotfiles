@@ -17,6 +17,7 @@ alias la='ls -al'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias vi='vim -u ~/dotfiles/vim/lib/vimrc.basics'
 alias v=vim
 alias view='vim -R'
 alias whois=_whois

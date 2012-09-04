@@ -1,0 +1,55 @@
+" vim: filetype=vim
+syntax on
+filetype plugin indent on
+colorscheme darkblue
+
+"set number
+set autoindent
+set showcmd
+set showmatch
+set showmode
+set laststatus=2 " always show status lines.
+set backspace=indent,eol,start
+set ruler
+set visualbell
+set nofoldenable
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+set expandtab
+
+set incsearch
+set hlsearch
+set ignorecase
+
+set nobackup
+set nowritebackup
+set noswapfile
+
+setlocal omnifunc=syntaxcomplete#Complete
+set pastetoggle=<F11>
+
+"----------------------------------------------------
+" Keymap
+"----------------------------------------------------
+inoremap <C-j> <DOWN>
+inoremap <C-k> <UP>
+inoremap <C-l> <RIGHT>
+inoremap <C-h> <LEFT>
+inoremap <C-Space> <Esc>
+
+nnoremap <C-h>     :<C-u>help<Space>
+nnoremap <Space>.  :<C-u>edit $MYVIMRC<CR>
+nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
+
+nnoremap <C-t> :tabedit<Return>
+nnoremap <C-x> :tabclose<Return>
+nnoremap <C-n> :tabnext<Return>
+nnoremap <C-p> :tabprevious<Return> 
+
+nnoremap <ESC><ESC> :nohlsearch<Return>
+
+nnoremap j gj
+nnoremap k gk
