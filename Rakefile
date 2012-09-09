@@ -17,6 +17,7 @@ end
 
 desc "update git submodules."
 task :update_git_submodule do
+  sh %(git submodule sync)
   sh %(git submodule update --init)
 end
 
