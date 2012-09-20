@@ -1,5 +1,5 @@
 # launching tmux by default.
-if [[ "$TERM" != "screen-256color" ]] then
+if [[ "x$TMUX" == "x" ]] then
   tmux new-session
   exit
 fi
