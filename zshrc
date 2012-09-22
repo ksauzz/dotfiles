@@ -148,6 +148,4 @@ safety_source ~/dotfiles/zsh/lib/zsh-syntax-highlighting/zsh-syntax-highlighting
 safety_source ~/dotfiles/zshalias
 
 safety_source $HOME/dotfiles/zshprofile.local
-safety_source $HOME/.pythonbrew/etc/bashrc
 safety_source $HOME/.perlbrew/etc/bashrc
-safety_source $HOME/.scm_breeze/scm_breeze.sh
