@@ -51,6 +51,7 @@ export EDITOR=vim
 export MANPAGER="less"
 
 export PATH=/usr/local/bin:$PATH
+export PATH=/opt/local/bin:$PATH
 
 export PATH=~/bin:$PATH
 export PATH=~/dotfiles/usr/bin:$PATH
@@ -101,6 +102,7 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zmq/lib
 
 export MANPATH=/usr/share/man:$MANPATH
+export MANPATH=/opt/local/share/man:$MANPATH
 export MANPATH=/usr/local/share/man:$MANPATH
 export MANPATH=~/dotfiles/usr/share/man:$MANPATH
 export MANPATH=/usr/local/zeromq/share:$MANPATH
