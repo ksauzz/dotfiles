@@ -1,6 +1,6 @@
 ## rbenv configuration
 export PATH=~/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 # LANG
 export LANG=ja_JP.UTF-8
