@@ -24,6 +24,6 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(npm git svn git-flow gem osx ruby github brew macports)
+plugins=(npm git svn git-flow gem osx ruby github brew macports vagrant)
 
 safety_source $ZSH/oh-my-zsh.sh
