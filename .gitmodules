@@ -16,6 +16,3 @@
 [submodule "zsh/lib/tmux-colors-solarized"]
 	path = zsh/lib/tmux-colors-solarized
 	url = git://github.com/seebi/tmux-colors-solarized.git
-[submodule "zsh/lib/oh-my-zsh"]
-	path = zsh/lib/oh-my-zsh
-	url = git@github.com:ksauzz/oh-my-zsh.git
