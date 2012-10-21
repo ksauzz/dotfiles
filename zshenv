@@ -97,9 +97,8 @@ export ERL_LIBS=/usr/local/eqc/
 
 export PATH=$PATH:$ORA_HOME/bin
 
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zmq/lib
+#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zmq/lib
 
 export MANPATH=/usr/share/man:$MANPATH
 export MANPATH=/opt/local/share/man:$MANPATH
