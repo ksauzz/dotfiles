@@ -43,3 +43,5 @@ function! ErlangSetting()
 endfunction
 autocmd! BufNewFile,BufRead *.app.src,rebar.config,reltool.config,sys.config,app.config setfiletype erlang
 autocmd! FileType erlang call ErlangSetting()
+
+au BufNewFile,BufRead *.gradle set filetype=groovy

@@ -40,5 +40,6 @@ Bundle 'h1mesuke/unite-outline.git'
 Bundle 'vim-scripts/sudo.vim'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'plasticboy/vim-markdown.git'
+Bundle 'vim-scripts/groovy.vim.git'
 
 let g:vundle_default_git_proto='git'
