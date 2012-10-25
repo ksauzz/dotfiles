@@ -1,5 +1,9 @@
 # launching tmux by default.
 if [[ "x$TMUX" == "x" ]] then
+  if ! which reattach-to-user-namespace > /dev/null; then
+    echo "zsh: [WARN] reattach-to-user-namespace is not found"
+  fi
+
   tmux new-session
   exit
 fi
