@@ -1,6 +1,9 @@
 ## rbenv configuration
 export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init - zsh)"
+## phpenv configuration
+export PATH=~/.phpenv/bin:$PATH
+eval "$(phpenv init - zsh)"
 
 # LANG
 export LANG=ja_JP.UTF-8
