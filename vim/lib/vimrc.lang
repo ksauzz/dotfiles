@@ -44,4 +44,18 @@ endfunction
 autocmd! BufNewFile,BufRead *.app.src,rebar.config,reltool.config,sys.config,app.config setfiletype erlang
 autocmd! FileType erlang call ErlangSetting()
 
+"----------------------------------------------------
+" PHP configuration
+"----------------------------------------------------
+function! PHPSetting()
+  set tabstop=4
+  set shiftwidth=4
+  set softtabstop=4
+  inoremap <buffer> -> ->
+endfunction
+autocmd! FileType php call PHPSetting()
+
+"----------------------------------------------------
+" Groovy configuration
+"----------------------------------------------------
 au BufNewFile,BufRead *.gradle set filetype=groovy
