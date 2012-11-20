@@ -12,7 +12,7 @@
 	url = git://github.com/zsh-users/zsh-completions.git
 [submodule "zsh/lib/tmux-powerline"]
 	path = zsh/lib/tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
+	url = git://github.com/ksauzz/tmux-powerline.git
 [submodule "zsh/lib/tmux-colors-solarized"]
 	path = zsh/lib/tmux-colors-solarized
 	url = git://github.com/seebi/tmux-colors-solarized.git
