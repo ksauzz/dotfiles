@@ -65,7 +65,7 @@ set t_Co=256
 "----------------------------------------------------
 " syntastic
 "----------------------------------------------------
-let g:syntastic_mode_map = { 'mode': 'active',
+let g:syntastic_mode_map = { 'mode': 'passive',
                              \'active_filetypes': [],
                              \'passive_filetypes': ['java'] }
 
