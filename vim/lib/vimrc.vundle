@@ -42,5 +42,6 @@ Bundle 'vim-scripts/sudo.vim'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'plasticboy/vim-markdown.git'
 Bundle 'vim-scripts/groovy.vim.git'
+Bundle 'vim-scripts/VimClojure.git'
 
 let g:vundle_default_git_proto='git'
