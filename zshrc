@@ -4,7 +4,13 @@ if [[ "x$TMUX" == "x" ]] then
     echo "zsh: [WARN] reattach-to-user-namespace is not found"
   fi
 
-  tmux new-session
+  if ! tmux has-session -t default; then
+    tmux new-session -s default
+  elif [[ "x"  == "x`tmux list-sessions | grep attached | grep default`" ]] then
+    tmux attach-session -t default
+  else
+    tmux new-session
+  fi
   exit
 fi
 
