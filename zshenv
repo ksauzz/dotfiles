@@ -96,6 +96,7 @@ export PATH=$PATH:/usr/local/ejabberd/sbin/
 export PATH=$PATH:/usr/local/zeromq/share
 export PATH=$PATH:/usr/local/homebrew/bin
 export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:/usr/local/haproxy/sbin
 
 export ERL_LIBS=/usr/local/eqc/
 
@@ -117,3 +118,5 @@ export MANPATH=/usr/local/erlang/current/share/man:$MANPATH
 export MANPATH=/usr/local/gtags/share/man:$MANPATH
 export MANPATH=/usr/local/tig/share/man:$MANPATH
 export MANPATH=/usr/local/zmq/share/man:$MANPATH
+export MANPATH=/usr/local/haproxy/share/man:$MANPATH
+
