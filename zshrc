@@ -35,6 +35,13 @@ function _whois {
   whois "$@" | nkf
 }
 
+function split-3windows {
+  tmux split-window -h
+  cd ${PWD}
+  tmux split-window
+  cd ${PWD}
+}
+
 function safety_source {
   if [[ -s $1 ]];then
     source $1
