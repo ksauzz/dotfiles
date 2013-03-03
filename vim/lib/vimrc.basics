@@ -1,7 +1,9 @@
 " vim: filetype=vim
 syntax on
 filetype plugin indent on
-colorscheme darkblue
+
+colorscheme solarized
+set background=dark
 
 "set number
 set autoindent
