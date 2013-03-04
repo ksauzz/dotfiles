@@ -45,5 +45,6 @@ Bundle 'plasticboy/vim-markdown.git'
 Bundle 'vim-scripts/groovy.vim.git'
 Bundle 'vim-scripts/VimClojure.git'
 Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'epmatsw/ag.vim.git'
 
 let g:vundle_default_git_proto='git'
