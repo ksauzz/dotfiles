@@ -15,6 +15,7 @@ REPORTTIME=3
 
 # JAVA_HOME
 expected_java_home=(
+`/usr/libexec/java_home`
 /opt/jdk
 /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 /usr/java/default
