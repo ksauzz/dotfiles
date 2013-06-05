@@ -171,3 +171,5 @@ safety_source ~/dotfiles/zshalias
 safety_source $HOME/.perlbrew/etc/bashrc
 
 safety_source /Library/Frameworks/Python.framework/Versions/Current/bin/virtualenvwrapper.sh
+
+safety_source $HOME/.nvm/nvm.sh

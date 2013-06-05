@@ -100,6 +100,8 @@ export PATH=$PATH:/usr/local/zeromq/share
 export PATH=$PATH:/usr/local/homebrew/bin
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/usr/local/haproxy/sbin
+export PATH=$PATH:/usr/local/nginx/sbin
+export PATH=$PATH:/usr/local/mongo/bin
 
 export ERL_LIBS=$ERL_LIBS:/usr/local/eqc/
 export ERL_LIBS=$ERL_LIBS:/usr/local/sync/
