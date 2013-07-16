@@ -102,6 +102,7 @@ export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/usr/local/haproxy/sbin
 export PATH=$PATH:/usr/local/nginx/sbin
 export PATH=$PATH:/usr/local/mongo/bin
+export PATH=/usr/local/heroku/bin:$PATH
 
 export ERL_LIBS=$ERL_LIBS:/usr/local/eqc/
 export ERL_LIBS=$ERL_LIBS:/usr/local/sync/
