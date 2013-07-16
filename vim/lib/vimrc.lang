@@ -59,3 +59,11 @@ autocmd! FileType php call PHPSetting()
 " Groovy configuration
 "----------------------------------------------------
 au BufNewFile,BufRead *.gradle set filetype=groovy
+
+"----------------------------------------------------
+" rst configuration
+"----------------------------------------------------
+function! RSTSetting()
+  inoremap <buffer>  == ==
+endfunction
+au BufNewFile,BufRead *.rst call RSTSetting()
