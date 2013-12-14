@@ -32,8 +32,10 @@ task :configure_gitignore do
     puts ".gitignore already configured."
     next
   end
+  sh %(git config --global core.excludesfile '~/.gitignore')
   sh %(echo doc/tags >> #{GITIGNORE})
   sh %(echo doc/tags-ja >> #{GITIGNORE})
+  sh %(echo .netrwhist >> #{GITIGNORE}) # quickhack
 end
 
 VIM_PROC_DIR = 'vim/bundle/vimproc'
