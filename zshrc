@@ -51,7 +51,7 @@ function safety_source {
 }
 
 safety_source $HOME/dotfiles/oh-my-zshrc
-safety_source $(brew --prefix autojump)/etc/autojump
+safety_source $(brew --prefix autojump)/etc/autojump.zsh
 
 ## Environment variable configuration
 
@@ -170,6 +170,6 @@ safety_source ~/dotfiles/zshalias
 #safety_source $HOME/dotfiles/zshprofile.local
 safety_source $HOME/.perlbrew/etc/bashrc
 
-safety_source /Library/Frameworks/Python.framework/Versions/Current/bin/virtualenvwrapper.sh
+safety_source `which virtualenvwrapper.sh`
 
 safety_source $HOME/.nvm/nvm.sh
