@@ -72,5 +72,5 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 "----------------------------------------------------
 " VimClojure
 "----------------------------------------------------
-let vimclojure#WantNailgun=1
-let vimclojure#NailgunClient="ng"
+"let vimclojure#WantNailgun=1
+"let vimclojure#NailgunClient="ng"
