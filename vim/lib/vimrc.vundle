@@ -46,5 +46,6 @@ Bundle 'vim-scripts/groovy.vim.git'
 Bundle 'vim-scripts/VimClojure.git'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'epmatsw/ag.vim.git'
+Bundle 'ekalinin/Dockerfile.vim'
 
 let g:vundle_default_git_proto='git'
