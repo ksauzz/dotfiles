@@ -1,6 +1,6 @@
 source ~/dotfiles/vim/lib/vimrc.common
 
-set guifont=Ricty\ for\ Powerline:h15
+set guifont=Ricty\ for\ Powerline:h18
 set guioptions=egmrLt
-set lines=40
-set columns=120
+set lines=80
+set columns=180
