@@ -35,6 +35,18 @@ function _whois {
   whois "$@" | nkf
 }
 
+function gist-clone {
+  if [[ "x$1" != "x" ]];then
+    git clone git@github.com:gist/$1.git $2
+  else
+    cat <<EOF
+USAGE
+=====
+gist-clone gist-id [work-dir-name]
+EOF
+  fi
+}
+
 function split-3windows {
   tmux split-window -h
   cd ${PWD}
