@@ -18,7 +18,7 @@ REPORTTIME=3
 
 # JAVA_HOME
 expected_java_home=(
-`/usr/libexec/java_home`
+`/usr/libexec/java_home 2>&1`
 /opt/jdk
 /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 /usr/java/default
@@ -107,14 +107,18 @@ export PATH=$PATH:/usr/local/haproxy/sbin
 export PATH=$PATH:/usr/local/nginx/sbin
 export PATH=$PATH:/usr/local/mongo/bin
 export PATH=/usr/local/heroku/bin:$PATH
+export PATH=$PATH:/usr/local/s3fs/bin
 
 export ERL_LIBS=$ERL_LIBS:/usr/local/eqc/
 export ERL_LIBS=$ERL_LIBS:/usr/local/sync/
 
 export PATH=$PATH:$ORA_HOME/bin
 
+# Setting C_INCLUDE_PATH cauases Ruby build issue.
 #export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORA_HOME/lib
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zmq/lib
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/libs3-2.0/lib/
+#export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/libs3-2.0/include/
 
 export MANPATH=/usr/share/man:$MANPATH
 export MANPATH=/opt/local/share/man:$MANPATH

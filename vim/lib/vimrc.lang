@@ -67,3 +67,10 @@ function! RSTSetting()
   inoremap <buffer>  == ==
 endfunction
 au BufNewFile,BufRead *.rst call RSTSetting()
+function! CSetting()
+  set tabstop=4
+  set shiftwidth=4
+  set softtabstop=4
+  set noexpandtab
+endfunction
+autocmd! FileType c call CSetting()
