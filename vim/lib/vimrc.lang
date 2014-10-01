@@ -61,6 +61,11 @@ autocmd! FileType php call PHPSetting()
 au BufNewFile,BufRead *.gradle set filetype=groovy
 
 "----------------------------------------------------
+" js configuration
+"----------------------------------------------------
+au BufNewFile,BufRead *.json set filetype=javascript
+
+"----------------------------------------------------
 " rst configuration
 "----------------------------------------------------
 function! RSTSetting()
