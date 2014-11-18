@@ -74,3 +74,8 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 "----------------------------------------------------
 "let vimclojure#WantNailgun=1
 "let vimclojure#NailgunClient="ng"
+
+"----------------------------------------------------
+" vim-markdown
+"----------------------------------------------------
+let g:vim_markdown_folding_disabled=1
