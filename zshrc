@@ -63,7 +63,7 @@ function safety_source {
 }
 
 safety_source $HOME/dotfiles/oh-my-zshrc
-safety_source $(brew --prefix autojump)/etc/autojump.zsh
+[ `uname` = "Darwin" ] && safety_source $(brew --prefix autojump)/etc/autojump.zsh
 
 ## Environment variable configuration
 
