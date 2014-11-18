@@ -5,9 +5,6 @@ eval "$(rbenv init - zsh)"
 export PATH=~/.phpenv/bin:$PATH
 eval "$(phpenv init - zsh)"
 
-## dvm configuration
-eval "$(dvm env)"
-
 # LANG
 export LANG=ja_JP.UTF-8
 
