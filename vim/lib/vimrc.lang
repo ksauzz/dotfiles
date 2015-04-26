@@ -72,3 +72,8 @@ function! RSTSetting()
   inoremap <buffer>  == ==
 endfunction
 au BufNewFile,BufRead *.rst call RSTSetting()
+
+"----------------------------------------------------
+" keepalived.conf configuration
+"----------------------------------------------------
+au BufRead,BufNewFile keepalived.conf setlocal filetype=keepalived

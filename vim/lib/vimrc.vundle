@@ -50,5 +50,6 @@ Bundle 'vim-erlang/vim-erlang-runtime.git'
 Bundle 'vim-erlang/vim-erlang-compiler.git'
 Bundle 'vim-erlang/vim-erlang-omnicomplete.git'
 Bundle 'vim-erlang/vim-erlang-tags.git'
+Bundle 'glidenote/keepalived-syntax.vim'
 
 let g:vundle_default_git_proto='git'
