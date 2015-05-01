@@ -22,7 +22,7 @@ end
 
 desc "install vim plugins."
 task :install_vim_plugins do
-  sh %(vim +BundleInstall +:q +:q)
+  sh %(vim +PluginInstall +:q +:q)
 end
 
 desc "configure .gitignore"
