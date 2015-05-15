@@ -65,6 +65,33 @@ task :make_vimproc do
       )
 end
 
+desc "setup tmux"
+task :setup_tmux do
+  ostype = RbConfig::CONFIG['host_os']
+  if ostype.match /^darwin/
+    sh %(brew install tmux)
+    sh %(brew install reattach-to-user-namespace)
+  elsif ostype.match /^linux/
+    sh %(brew install tmux)
+  end
+end
+
+desc "setup rbenv"
+task :setup_rbenv do
+  unless Dir.exist? "#{ENV["HOME"]}/.rbenv" then
+    sh %(git clone https://github.com/sstephenson/rbenv.git ~/.rbenv)
+  end
+  sh %(mkdir -p ~/.rbenv/plugins)
+  unless Dir.exist? "#{ENV["HOME"]}/.rbenv/plugins/ruby-build" then
+    sh %(git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build)
+  end
+  ostype = RbConfig::CONFIG['host_os']
+  if ostype.match /^darwin/
+    sh %(brew install readline)
+    sh %(brew link readline)
+  end
+end
+
 desc "run all tasks."
 task :all  => %w(
                 update_git_submodule
@@ -72,6 +99,8 @@ task :all  => %w(
                 make_symbolic_link
                 make_vimproc
                 configure_gitignore
+                setup_tmux
+                setup_rbenv
               )
 
 task :default =>[:all]
