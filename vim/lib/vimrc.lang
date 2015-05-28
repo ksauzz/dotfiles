@@ -41,7 +41,7 @@ function! ErlangSetting()
   set softtabstop=4
   set makeprg=make\ compile
 endfunction
-autocmd! BufNewFile,BufRead *.app.src,rebar.config,reltool.config,sys.config,app.config setfiletype erlang
+autocmd! BufNewFile,BufRead *.app.src,rebar.config,reltool.config,sys.config,app.config,*.schema setfiletype erlang
 autocmd! FileType erlang call ErlangSetting()
 
 "----------------------------------------------------
