@@ -1,9 +1,13 @@
 ## rbenv configuration
-export PATH=~/.rbenv/bin:$PATH
-eval "$(rbenv init - zsh)"
+if [ -d ~/.rbenv ]; then
+  export PATH=~/.rbenv/bin:$PATH
+  eval "$(rbenv init - zsh)"
+fi
 ## phpenv configuration
-export PATH=~/.phpenv/bin:$PATH
-eval "$(phpenv init - zsh)"
+if [ -d ~/.phpenv ]; then
+  export PATH=~/.phpenv/bin:$PATH
+  eval "$(phpenv init - zsh)"
+fi
 
 # LANG
 export LANG=ja_JP.UTF-8

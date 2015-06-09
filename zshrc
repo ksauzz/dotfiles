@@ -62,6 +62,43 @@ function safety_source {
   fi
 }
 
+# erlenv quickhack
+ERL_HOME=/usr/local/erlang
+function _erlenv_list {
+  ls -1 $ERL_HOME | grep -v current
+}
+
+function _erlenv_current {
+  echo -n "current: "
+  ls -l $ERL_HOME | grep current | awk '{print $11}' | tr -d "$ERL_HOME"
+}
+
+function _erlenv_set {
+  if [ "$1" == "" ]; then
+    echo "USAGE: erlenv set <OTP VERSION>"
+    return
+  elif [ ! -d "$ERL_HOME/$1" ]; then
+    echo "$ERL_HOME/$1 is not found."
+    return
+  fi
+  echo "setting $1 as current otp..."
+  rm $ERL_HOME/current
+  ln -s $ERL_HOME/$1 $ERL_HOME/current
+}
+
+function erlenv {
+  case "$1" in
+    list)
+      _erlenv_list
+      ;;
+    "set")
+      _erlenv_set $2
+      ;;
+    *)
+      _erlenv_current
+  esac
+}
+
 safety_source $HOME/dotfiles/oh-my-zshrc
 [ `uname` = "Darwin" ] && safety_source $(brew --prefix autojump)/etc/autojump.zsh
 
