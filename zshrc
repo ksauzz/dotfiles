@@ -74,7 +74,7 @@ function _erlenv_current {
 }
 
 function _erlenv_set {
-  if [ "$1" == "" ]; then
+  if [ "$1" = "" ]; then
     echo "USAGE: erlenv set <OTP VERSION>"
     return
   elif [ ! -d "$ERL_HOME/$1" ]; then
