@@ -70,7 +70,7 @@ function _erlenv_list {
 
 function _erlenv_current {
   echo -n "current: "
-  ls -l $ERL_HOME | grep current | awk '{print $11}' | tr -d "$ERL_HOME"
+  ls -l $ERL_HOME | grep current | awk '{print $11}' | sed 's/\(.*\)\/\(.*\)/\2/'
 }
 
 function _erlenv_set {
