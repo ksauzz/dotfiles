@@ -1,0 +1,65 @@
+<!--
+
+  Karabiner custom settings.
+  To load this setting private.xml should have follwoing line.
+
+    <include path="{{ ENV_HOME }}/dotfiles/misc/karabiner.xml" />
+
+-->
+<?xml version="1.0"?>
+<root>
+  <!-- Device definitions -->
+  <devicevendordef>
+    <vendorname>Topre</vendorname>
+    <vendorid>0x0853</vendorid>
+  </devicevendordef>
+
+  <deviceproductdef>
+    <productname>HHKB</productname>
+    <productid>0x0100</productid>
+  </deviceproductdef>
+
+  <!--Custom items -->
+  <item>
+    <name>My Custom Settings</name>
+    <item>
+      <!-- Custom cursor settings-->
+      <name>Option_L+H/J/K/L to Arrow</name>
+        <identifier>private.option_l.cursor</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::H, ModifierFlag::OPTION_L,
+          KeyCode::CURSOR_LEFT
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::L, ModifierFlag::OPTION_L,
+          KeyCode::CURSOR_RIGHT
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::K, ModifierFlag::OPTION_L,
+          KeyCode::CURSOR_UP
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::J, ModifierFlag::OPTION_L,
+          KeyCode::CURSOR_DOWN
+        </autogen>
+    </item>
+
+    <!-- HHKB settings -->
+    <item>
+      <name>Emulate MacBook Keyboard with HHKB (Enabled on HHKB only)</name>
+      <appendix>Swap keys:</appendix>
+      <appendix> - DEL -> Backslash(\)</appendix>
+      <appendix> - Backslash(\) -> Backquote(`)</appendix>
+      <appendix> - Backquote(`) -> DEL</appendix>
+      <identifier>private.HHKB.swap.del.with.backslash.and.backquote</identifier>
+      <device_only>DeviceVendor::Topre, DeviceProduct::HHKB</device_only>
+      <autogen> __KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE </autogen>
+      <autogen> __KeyToKey__ KeyCode::DELETE, KeyCode::BACKSLASH </autogen>
+      <autogen> __KeyToKey__ KeyCode::BACKSLASH, KeyCode::BACKQUOTE </autogen>
+    </item>
+  </item>
+</root>
