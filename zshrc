@@ -16,11 +16,25 @@ fi
 
 ## Function section.
 function watchmvn {
-  watchmedo shell-command --patterns="*.java" --recursive --wait --command="mvn compile -o" $*
+  watchmedo shell-command \
+    --patterns="*.java" \
+    --recursive --wait \
+    --command="mvn compile -o" $*
 }
 
 function watcherl {
-  watchmedo shell-command --patterns="*.hrl;*.erl" --recursive --wait --command="./rebar compile" $*
+  watchmedo shell-command \
+    --patterns="*.hrl;*.erl" \
+    --recursive --wait \
+    --command="./rebar compile" $*
+}
+
+function watchc {
+  watchmedo shell-command \
+    --patterns="*.h;*.c" \
+    --recursive --wait \
+    --command="make;\
+               echo \"$(tput setaf 2)## DONE ##$(tput sgr0) \$(date '+%Y/%m/%d %H:%M:%S')\"" $*
 }
 
 function ack_vim {
