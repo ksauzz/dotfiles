@@ -89,6 +89,15 @@ endfunction
 autocmd! FileType c call CSetting()
 
 "----------------------------------------------------
+" Go language configuration
+"----------------------------------------------------
+set tabstop=8
+set shiftwidth=8
+set softtabstop=8
+set nosmarttab
+set noexpandtab
+
+"----------------------------------------------------
 " keepalived.conf configuration
 "----------------------------------------------------
 au BufRead,BufNewFile keepalived.conf setlocal filetype=keepalived

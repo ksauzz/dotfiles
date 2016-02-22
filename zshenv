@@ -132,3 +132,4 @@ export MANPATH=/usr/local/tig/share/man:$MANPATH
 export MANPATH=/usr/local/zmq/share/man:$MANPATH
 export MANPATH=/usr/local/haproxy/share/man:$MANPATH
 
+export GOPATH=$HOME/.go

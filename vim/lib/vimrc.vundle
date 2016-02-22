@@ -53,6 +53,7 @@ Plugin 'vim-erlang/vim-erlang-compiler.git'
 Plugin 'vim-erlang/vim-erlang-omnicomplete.git'
 Plugin 'vim-erlang/vim-erlang-tags.git'
 Plugin 'glidenote/keepalived-syntax.vim'
+Plugin 'fatih/vim-go.git'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
