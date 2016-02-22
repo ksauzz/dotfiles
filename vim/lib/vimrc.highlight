@@ -4,8 +4,8 @@
 " Specialkey highlight
 "----------------------------------------------------
 set list
-set listchars=tab:\_\_,trail:_
-highlight SpecialKey cterm=underline ctermbg=darkgray guibg=darkgray
+set listchars=tab:\ \ ,trail:\ 
+highlight SpecialKey cterm=underline
 
 "----------------------------------------------------
 " cursorline highlight
