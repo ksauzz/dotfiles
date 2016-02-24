@@ -54,7 +54,7 @@ task :make_vimproc do
     puts "unknown OSTYPE(#{ostype})"
     next
   end
-  if File.exists? "#{VIM_PROC_DIR}/autoload/#{libfile}"
+  if File.exists? "#{VIM_PROC_DIR}/lib/#{libfile}"
     puts "#{libfile} already exists."
     next
   end
