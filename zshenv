@@ -37,6 +37,8 @@ export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 
 export PERLBREW_ROOT=~/.perlbrew
 
+export GOPATH=$HOME/.go
+
 # Macports
 export PORTS_HOME=/usr/local/macports
 export PATH=$PORTS_HOME/bin:$PORTS_HOME/sbin:$PATH
@@ -74,6 +76,7 @@ export PATH=/usr/local/memcached/bin:$PATH
 export PATH=/usr/local/Cellar/ccache/3.1.8/libexec:$PATH
 export PATH=$RUBY_HOME/bin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:~/.cabal/bin/
 export PATH=$PATH:/usr/local/zeromq/bin/
 export PATH=$PATH:/usr/local/bind/sbin
@@ -131,5 +134,3 @@ export MANPATH=/usr/local/gtags/share/man:$MANPATH
 export MANPATH=/usr/local/tig/share/man:$MANPATH
 export MANPATH=/usr/local/zmq/share/man:$MANPATH
 export MANPATH=/usr/local/haproxy/share/man:$MANPATH
-
-export GOPATH=$HOME/.go
