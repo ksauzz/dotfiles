@@ -52,6 +52,7 @@ nnoremap <C-n> :tabnext<Return>
 nnoremap <C-p> :tabprevious<Return> 
 
 nnoremap <ESC><ESC> :nohlsearch<Return>
+nnoremap <F4> :TagbarToggle<Return>
 
 nnoremap j gj
 nnoremap k gk
