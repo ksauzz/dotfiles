@@ -92,11 +92,12 @@ autocmd! FileType c call CSetting()
 " Go language configuration
 "----------------------------------------------------
 function! GoSetting()
-  set tabstop=8
-  set shiftwidth=8
-  set softtabstop=8
+  set tabstop=2
+  set shiftwidth=2
+  set softtabstop=2
   set nosmarttab
   set noexpandtab
+  inoremap <buffer> := :=
 endfunction
 autocmd! FileType go call GoSetting()
 
