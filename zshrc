@@ -230,7 +230,7 @@ safety_source ~/dotfiles/zsh/lib/zsh-syntax-highlighting/zsh-syntax-highlighting
 
 safety_source ~/dotfiles/zshalias
 
-#safety_source $HOME/dotfiles/zshprofile.local
+safety_source $HOME/.zprofile.local
 safety_source $HOME/.perlbrew/etc/bashrc
 
 safety_source `which virtualenvwrapper.sh`
