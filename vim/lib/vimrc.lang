@@ -70,6 +70,11 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 au BufNewFile,BufRead *.json set filetype=javascript
 
 "----------------------------------------------------
+" Ruby configuration
+"----------------------------------------------------
+au BufNewFile,BufRead Gemfile set filetype=ruby
+
+"----------------------------------------------------
 " rst configuration
 "----------------------------------------------------
 function! RSTSetting()
