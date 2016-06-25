@@ -76,6 +76,17 @@ au BufNewFile,BufRead Gemfile set filetype=ruby
 au BufNewFile,BufRead .env set filetype=yaml
 
 "----------------------------------------------------
+" Python configuration
+"----------------------------------------------------
+function! PySetting()
+  set tabstop=4
+  set shiftwidth=4
+  set softtabstop=4
+  set expandtab
+endfunction
+autocmd! FileType python call PySetting()
+
+"----------------------------------------------------
 " rst configuration
 "----------------------------------------------------
 function! RSTSetting()
