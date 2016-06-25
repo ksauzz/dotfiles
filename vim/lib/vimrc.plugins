@@ -9,6 +9,11 @@ nnoremap ;t :Unite tab<Return>
 nnoremap ;f :Unite file_mru<Return>
 
 "----------------------------------------------------
+" Unite Rails
+"----------------------------------------------------
+nnoremap ;r :Unite rails/
+
+"----------------------------------------------------
 " QuickRun
 "----------------------------------------------------
 let g:quickrun_config = {
@@ -36,6 +41,7 @@ nnoremap <F2> :NERDTreeToggle<Return>
 " smartchr
 "----------------------------------------------------
 inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ')
+inoremap <expr> =<ESC> smartchr#one_of('=<ESC>')
 inoremap <expr> , smartchr#one_of(', ', ',')
 inoremap <expr> ,<CR> smartchr#one_of(',<CR>')
 inoremap <expr> ,<ESC> smartchr#one_of(',<ESC>')

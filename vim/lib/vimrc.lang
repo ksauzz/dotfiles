@@ -73,6 +73,7 @@ au BufNewFile,BufRead *.json set filetype=javascript
 " Ruby configuration
 "----------------------------------------------------
 au BufNewFile,BufRead Gemfile set filetype=ruby
+au BufNewFile,BufRead .env set filetype=yaml
 
 "----------------------------------------------------
 " rst configuration
