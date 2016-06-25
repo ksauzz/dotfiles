@@ -56,6 +56,7 @@ Plugin 'glidenote/keepalived-syntax.vim'
 Plugin 'fatih/vim-go.git'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'basyura/unite-rails.git'
+Plugin 'nvie/vim-flake8'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
