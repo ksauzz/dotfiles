@@ -10,6 +10,8 @@ set autoindent
 set showcmd
 set showmatch
 set showmode
+set modeline
+set modelines=5
 set laststatus=2 " always show status lines.
 set backspace=indent,eol,start
 set ruler
