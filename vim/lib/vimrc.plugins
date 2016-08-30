@@ -33,7 +33,7 @@ nnoremap <F3> :QuickRun<Return>
 "----------------------------------------------------
 "let NERDTreeShowHidden=1
 "let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\CVS$']
+let NERDTreeIgnore=['\CVS$', '\.pyc$']
 let NERDTreeWinSize=60
 nnoremap <F2> :NERDTreeToggle<Return>
 
@@ -74,6 +74,7 @@ set t_Co=256
 let g:syntastic_mode_map = { 'mode': 'passive',
                              \'active_filetypes': [],
                              \'passive_filetypes': ['java'] }
+
 
 "----------------------------------------------------
 " VimClojure
