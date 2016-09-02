@@ -59,6 +59,7 @@ Plugin 'basyura/unite-rails.git'
 Plugin 'nvie/vim-flake8'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
+Plugin 'vim-scripts/DrawIt'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
