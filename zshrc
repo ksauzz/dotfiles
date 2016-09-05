@@ -78,8 +78,8 @@ function safety_source {
 
 function docker-rmi-all {
   docker rm $(docker ps -a -q -f status=exited)
-  docker rmi $(docker images -f "dangling=true" -q)
-  docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes
+  docker rmi $(docker images -q -f dangling=true)
+  docker volume rm $(docker volume ls -q -f dangling=true)
 }
 
 # erlenv quickhack
