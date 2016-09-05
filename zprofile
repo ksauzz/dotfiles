@@ -14,3 +14,9 @@ if [ -d ~/.pyenv ]; then
   export PATH=$PYENV_ROOT/bin:$PATH
   eval "$(pyenv init - zsh)"
 fi
+## exenv configuration
+if [ -d ~/.exenv ]; then
+  export EXENV_ROOT=~/.exenv
+  export PATH=$EXENV_ROOT/bin:$PATH
+  eval "$(exenv init - zsh)"
+fi
