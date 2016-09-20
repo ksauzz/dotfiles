@@ -70,6 +70,12 @@ au BufNewFile,BufRead *.gradle,Jenkinsfile set filetype=groovy
 au BufNewFile,BufRead *.json set filetype=javascript
 
 "----------------------------------------------------
+" BQL configuration
+"----------------------------------------------------
+au BufNewFile,BufRead *.bql set filetype=sql
+
+
+"----------------------------------------------------
 " Ruby configuration
 "----------------------------------------------------
 au BufNewFile,BufRead Gemfile set filetype=ruby
@@ -93,6 +99,7 @@ function! RSTSetting()
   inoremap <buffer>  == ==
 endfunction
 au BufNewFile,BufRead *.rst call RSTSetting()
+
 "----------------------------------------------------
 " C language configuration
 "----------------------------------------------------
