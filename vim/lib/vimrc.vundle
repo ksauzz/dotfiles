@@ -60,6 +60,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-scripts/DrawIt'
+Plugin 'hashivim/vim-hashicorp-tools'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
