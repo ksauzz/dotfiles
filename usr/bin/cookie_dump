@@ -23,5 +23,5 @@ if [ "x$1" == "x" ];then
 fi
 
 host=$1
-default_prifile=`find ~/Library/Application\ Support/Firefox/Profiles/ -name *.default|head -1`
+default_prifile=`find ~/Library/Application\ Support/Firefox/Profiles/ -name *.default*|head -1`
 sqlite3 "${default_prifile}/cookies.sqlite" "select name, value from moz_cookies where host like \"$host\"" | awk '{FS="|"}{print $1 "=" $2 ";" }' | tr -d '\012'
