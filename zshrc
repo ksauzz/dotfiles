@@ -37,6 +37,14 @@ function watchc {
                echo \"$(tput setaf 2)## DONE ##$(tput sgr0) \$(date '+%Y/%m/%d %H:%M:%S')\"" $*
 }
 
+function watchgo {
+  watchmedo shell-command \
+    --patterns="*.go" \
+    --recursive --wait \
+    --command="go build -v . ;\
+               echo \"$(tput setaf 2)## DONE ##$(tput sgr0) \$(date '+%Y/%m/%d %H:%M:%S')\""
+}
+
 function ack_vim {
   vim $(ack -g $@)
 }
