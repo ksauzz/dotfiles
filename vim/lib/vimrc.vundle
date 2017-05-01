@@ -64,6 +64,7 @@ Plugin 'hashivim/vim-hashicorp-tools'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'uarun/vim-protobuf'
 Plugin 'kylef/apiblueprint.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
