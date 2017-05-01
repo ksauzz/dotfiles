@@ -38,19 +38,6 @@ let NERDTreeWinSize=60
 nnoremap <F2> :NERDTreeToggle<Return>
 
 "----------------------------------------------------
-" smartchr
-"----------------------------------------------------
-inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ')
-inoremap <expr> =<ESC> smartchr#one_of('=<ESC>')
-inoremap <expr> , smartchr#one_of(', ', ',')
-inoremap <expr> ,<CR> smartchr#one_of(',<CR>')
-inoremap <expr> ,<ESC> smartchr#one_of(',<ESC>')
-inoremap <expr> => smartchr#one_of(' => ')
-inoremap <expr> =><CR> smartchr#one_of(' =><CR>')
-inoremap <expr> -> smartchr#one_of(' -> ')
-inoremap <expr> -><CR> smartchr#one_of(' -><CR>')
-
-"----------------------------------------------------
 " GNU GLOBAL(gtags)
 "----------------------------------------------------
 nmap <C-q> <C-w><C-w><C-w>q
