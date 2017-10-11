@@ -20,3 +20,5 @@ if [ -d ~/.exenv ]; then
   export PATH=$EXENV_ROOT/bin:$PATH
   eval "$(exenv init - zsh)"
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
