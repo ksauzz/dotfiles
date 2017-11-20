@@ -90,6 +90,12 @@ function docker-rmi-all {
   docker volume rm $(docker volume ls -q -f dangling=true)
 }
 
+function randstr {
+  length=${1:-64}
+  format=${2:-a-zA-Z0-9}
+  sh -c "LC_ALL=C; cat /dev/urandom | tr -dc $format | fold -w \"$length\" | head -n 1"
+}
+
 # erlenv quickhack
 ERL_HOME=/usr/local/erlang
 function _erlenv_list {
