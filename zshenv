@@ -1,16 +1,6 @@
-## rbenv configuration
-if [ -d ~/.rbenv ]; then
-  export PATH=~/.rbenv/bin:$PATH
-  eval "$(rbenv init - zsh)"
-fi
-## phpenv configuration
-if [ -d ~/.phpenv ]; then
-  export PATH=~/.phpenv/bin:$PATH
-  eval "$(phpenv init - zsh)"
-fi
-
 # LANG
 export LANG=ja_JP.UTF-8
+export LC_ALL=ja_JP.UTF-8
 
 # oracle SQL*Plus setting
 export NLS_LANG='Japanese_Japan.UTF8'
@@ -36,6 +26,8 @@ done
 export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 
 export PERLBREW_ROOT=~/.perlbrew
+
+export GOPATH=$HOME/.go
 
 # Macports
 export PORTS_HOME=/usr/local/macports
@@ -74,6 +66,7 @@ export PATH=/usr/local/memcached/bin:$PATH
 export PATH=/usr/local/Cellar/ccache/3.1.8/libexec:$PATH
 export PATH=$RUBY_HOME/bin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:~/.cabal/bin/
 export PATH=$PATH:/usr/local/zeromq/bin/
 export PATH=$PATH:/usr/local/bind/sbin
@@ -120,6 +113,7 @@ export PATH=$PATH:$ORA_HOME/bin
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zmq/lib
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/libs3-2.0/lib/
 #export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/libs3-2.0/include/
+export MESOS_NATIVE_JAVA_LIBRARY=/usr/local/mesos/lib/libmesos.dylib
 
 export MANPATH=/usr/share/man:$MANPATH
 export MANPATH=/opt/local/share/man:$MANPATH
@@ -135,4 +129,3 @@ export MANPATH=/usr/local/gtags/share/man:$MANPATH
 export MANPATH=/usr/local/tig/share/man:$MANPATH
 export MANPATH=/usr/local/zmq/share/man:$MANPATH
 export MANPATH=/usr/local/haproxy/share/man:$MANPATH
-

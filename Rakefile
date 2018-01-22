@@ -1,6 +1,6 @@
 #!/usr/bin/env rake
 
-DOT_FILES = FileList.new %w(*rc zshenv vim rst2pdf my.cnf ctags tmux.conf)
+DOT_FILES = FileList.new %w(*rc zprofile zshenv vim rst2pdf my.cnf ctags tmux.conf)
 dirname = File.expand_path File.dirname(__FILE__)
 
 desc "make symbolic links of dotfile."
@@ -54,7 +54,7 @@ task :make_vimproc do
     puts "unknown OSTYPE(#{ostype})"
     next
   end
-  if File.exists? "#{VIM_PROC_DIR}/autoload/#{libfile}"
+  if File.exists? "#{VIM_PROC_DIR}/lib/#{libfile}"
     puts "#{libfile} already exists."
     next
   end

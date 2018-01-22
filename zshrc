@@ -37,6 +37,14 @@ function watchc {
                echo \"$(tput setaf 2)## DONE ##$(tput sgr0) \$(date '+%Y/%m/%d %H:%M:%S')\"" $*
 }
 
+function watchgo {
+  watchmedo shell-command \
+    --patterns="*.go" \
+    --recursive --wait \
+    --command="go build -v . ;\
+               echo \"$(tput setaf 2)## DONE ##$(tput sgr0) \$(date '+%Y/%m/%d %H:%M:%S')\""
+}
+
 function ack_vim {
   vim $(ack -g $@)
 }
@@ -74,6 +82,12 @@ function safety_source {
   else
     echo "zsh: [WARN] $1 not found..."
   fi
+}
+
+function docker-rmi-all {
+  docker rm $(docker ps -a -q -f status=exited)
+  docker rmi $(docker images -q -f dangling=true)
+  docker volume rm $(docker volume ls -q -f dangling=true)
 }
 
 # erlenv quickhack
@@ -114,7 +128,7 @@ function erlenv {
 }
 
 safety_source $HOME/dotfiles/oh-my-zshrc
-[ `uname` = "Darwin" ] && safety_source $(brew --prefix autojump)/etc/autojump.zsh
+[ `uname` = "Darwin" ] && safety_source $(brew --prefix autojump)/etc/autojump.sh
 
 ## Environment variable configuration
 
@@ -230,7 +244,7 @@ safety_source ~/dotfiles/zsh/lib/zsh-syntax-highlighting/zsh-syntax-highlighting
 
 safety_source ~/dotfiles/zshalias
 
-#safety_source $HOME/dotfiles/zshprofile.local
+safety_source $HOME/.zprofile.local
 safety_source $HOME/.perlbrew/etc/bashrc
 
 safety_source `which virtualenvwrapper.sh`

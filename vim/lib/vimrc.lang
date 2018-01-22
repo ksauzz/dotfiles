@@ -62,12 +62,35 @@ au BufNewFile,BufRead *.sbt set filetype=scala
 "----------------------------------------------------
 " Groovy configuration
 "----------------------------------------------------
-au BufNewFile,BufRead *.gradle set filetype=groovy
+au BufNewFile,BufRead *.gradle,Jenkinsfile set filetype=groovy
 
 "----------------------------------------------------
 " js configuration
 "----------------------------------------------------
 au BufNewFile,BufRead *.json set filetype=javascript
+
+"----------------------------------------------------
+" BQL configuration
+"----------------------------------------------------
+au BufNewFile,BufRead *.bql set filetype=sql
+
+
+"----------------------------------------------------
+" Ruby configuration
+"----------------------------------------------------
+au BufNewFile,BufRead Gemfile set filetype=ruby
+au BufNewFile,BufRead .env set filetype=yaml
+
+"----------------------------------------------------
+" Python configuration
+"----------------------------------------------------
+function! PySetting()
+  set tabstop=4
+  set shiftwidth=4
+  set softtabstop=4
+  set expandtab
+endfunction
+autocmd! FileType python call PySetting()
 
 "----------------------------------------------------
 " rst configuration
@@ -88,6 +111,19 @@ function! CSetting()
   inoremap <buffer> -> ->
 endfunction
 autocmd! FileType c call CSetting()
+
+"----------------------------------------------------
+" Go language configuration
+"----------------------------------------------------
+function! GoSetting()
+  set tabstop=2
+  set shiftwidth=2
+  set softtabstop=2
+  set nosmarttab
+  set noexpandtab
+  inoremap <buffer> := :=
+endfunction
+autocmd! FileType go call GoSetting()
 
 "----------------------------------------------------
 " keepalived.conf configuration
