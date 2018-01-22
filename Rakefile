@@ -72,7 +72,7 @@ task :setup_tmux do
     sh %(brew install tmux)
     sh %(brew install reattach-to-user-namespace)
   elsif ostype.match /^linux/
-    sh %(brew install tmux)
+    sh %(sudo apt-get install -y tmux)
   end
 end
 
