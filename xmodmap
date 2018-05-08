@@ -1,10 +1,29 @@
+! Swap colon and semicolon
 keycode  47      = colon semicolon
 
-remove   Lock    = Caps_Lock
-remove   Control = Control_L
+! clear modifiers
+clear    Lock
+clear    Control
+clear    Mod1
+clear    Mod4
 
-keysym   Control_L = Caps_Lock
-keysym   Caps_Lock = Control_L
+! Use Caps_lock as Control_L
+keycode  66       = Control_L Caps_Lock
 
-add      Lock    = Caps_Lock
-add      Control = Control_L
+! Change Alt and PrtSc to Super, Ctl to Alt for Thinkpad
+keycode  37       = Alt_L Meta_L Alt_L Meta_L
+keycode  105      = Alt_R Meta_R Alt_R Meta_R
+keycode  64       = Super_L
+keycode  107      = Super_L
+keycode  108      = Super_L
+
+! re-register modifiers
+add      Control  = Control_L
+add      Mod1     = Alt_L Alt_R Meta_L
+add      Mod4     = Super_L Super_R
+
+! Alt + hjkl as cursor for HHKB
+keycode  43       = h H Left  H
+keycode  44       = j J Down  J
+keycode  45       = k K Up    K
+keycode  46       = l L Right L
