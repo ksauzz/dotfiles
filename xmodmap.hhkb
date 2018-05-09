@@ -1,0 +1,12 @@
+! Swap colon and semicolon
+keycode  47      = colon semicolon
+
+keycode  22      = backslash bar backslash bar
+keycode  49      = BackSpace BackSpace BackSpace BackSpace
+keycode  51      = grave asciitilde grave asciitilde
+
+! Alt + hjkl as cursor for HHKB
+keycode  43       = h H Left  H
+keycode  44       = j J Down  J
+keycode  45       = k K Up    K
+keycode  46       = l L Right L
