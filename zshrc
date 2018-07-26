@@ -105,7 +105,7 @@ function docker-rmi-all {
 function randstr {
   length=${1:-64}
   format=${2:-a-zA-Z0-9}
-  sh -c "LC_ALL=C; cat /dev/urandom | tr -dc $format | fold -w \"$length\" | head -n 1"
+  sh -c "LC_ALL=C; openssl rand 1000 | tr -dc $format | fold -w \"$length\" | head -n 1"
 }
 
 # erlenv quickhack
