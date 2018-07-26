@@ -14,13 +14,17 @@ if [[ "x$TMUX" == "x" ]] then
   exit
 fi
 
-if [[ "`xmodmap | grep -c 'Caps_Lock (0x25)'`" == "0" ]]; then
-  if [[ "`xinput | grep -c HHKB`" == "1" ]]; then
-    xmodmap ~/dotfiles/xmodmap.hhkb
-  else
-    xmodmap ~/dotfiles/xmodmap
+function xmod() {
+  if [[ "`xmodmap | grep -c 'Caps_Lock (0x25)'`" == "0" ]]; then
+    setxkbmap -option
+    if [[ "`xinput | grep -c HHKB`" == "1" ]]; then
+      xmodmap ~/dotfiles/xmodmap.hhkb
+    else
+      xmodmap ~/dotfiles/xmodmap
+    fi
   fi
-fi
+}
+xmod
 
 ## Function section.
 function watchmvn {
