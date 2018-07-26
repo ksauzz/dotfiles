@@ -71,8 +71,6 @@ task :setup_tmux do
   if ostype.match /^darwin/
     sh %(brew install tmux)
     sh %(brew install reattach-to-user-namespace)
-  elsif ostype.match /^linux/
-    sh %(sudo apt-get install -y tmux)
   end
 end
 
