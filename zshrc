@@ -24,7 +24,7 @@ function xmod() {
     fi
   fi
 }
-xmod
+#xmod
 
 ## Function section.
 function watchmvn {
@@ -55,6 +55,15 @@ function watchgo {
     --recursive --wait \
     --command="go build -v . ;\
                echo \"$(tput setaf 2)## DONE ##$(tput sgr0) \$(date '+%Y/%m/%d %H:%M:%S')\""
+}
+
+function git-pr {
+  pr_num=$1
+  echo "fetching origin pull/$pr_num/merge as pr/$pr_num..."
+  git fetch origin pull/$pr_num/merge:pr/$pr_num
+
+  echo "checking out pr/$pr_num..."
+  git checkout pr/$pr_num
 }
 
 function ack_vim {
