@@ -9,6 +9,7 @@ case "${OSTYPE}" in
     ;;
   linux*)
     alias ls="ls --color"
+    alias rbenv='CONFIGURE_OPTS="--with-readline-dir=/usr/lib" rbenv'
     ;;
 esac
 
