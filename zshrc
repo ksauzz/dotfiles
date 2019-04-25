@@ -154,6 +154,24 @@ function erlenv {
   esac
 }
 
+function _k8senv_list {
+  kubectl config get-contexts
+}
+
+function _k8senv_set {
+  kubectl config use-context $1
+}
+
+function k8senv {
+  case "$1" in
+    "set")
+      _k8senv_set $2
+      ;;
+    *)
+      _k8senv_list
+  esac
+}
+
 safety_source $HOME/dotfiles/oh-my-zshrc
 [ `uname` = "Darwin" ] && safety_source $(brew --prefix autojump)/etc/autojump.sh
 

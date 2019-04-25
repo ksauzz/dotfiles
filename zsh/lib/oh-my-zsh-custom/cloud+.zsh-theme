@@ -22,6 +22,13 @@ function pyenv_prompt_info {
   echo "🐍  $(cached_env_prompt pyenv) "
 }
 
+function kube_context {
+  type kubectl >/dev/null 2>&1
+  if [ $? -eq 0 ]; then
+    echo "(☸ $(kubectl config current-context))"
+  fi
+}
+
 function erlenv_prompt_info {
   if which _erlenv_current &> /dev/null; then
     echo "$(_erlenv_current | sed -e 's/current: //')"
@@ -40,6 +47,7 @@ PROMPT='\
 %{$fg_bold[blue]%}%n@%m%{$fg_bold[cyan]%}☁ %{$fg_bold[green]%}%p%{$fg[green]%}%~ \
 %{$fg_bold[blue]%}$(rbenv_prompt_info)\
 $(pyenv_prompt_info)%{$fg[green]%}\
+$(kube_context) \
 $(erlenv_prompt_info) \
 %{$fg_bold[cyan]%}$(gopath_prompt_info) \
 %{$fg_bold[cyan]%}$(git_prompt_info)\
