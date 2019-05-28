@@ -25,7 +25,7 @@ function pyenv_prompt_info {
 function kube_context {
   type kubectl >/dev/null 2>&1
   if [ $? -eq 0 ]; then
-    echo "(☸ $(kubectl config current-context))"
+    echo "(☸ $(kubectl config current-context 2>/dev/null))"
   fi
 }
 
