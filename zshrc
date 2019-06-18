@@ -295,3 +295,4 @@ safety_source $HOME/.perlbrew/etc/bashrc
 safety_source `which virtualenvwrapper.sh`
 
 safety_source $HOME/.nvm/nvm.sh
+safety_source $(pyenv which aws_zsh_completer.sh)
