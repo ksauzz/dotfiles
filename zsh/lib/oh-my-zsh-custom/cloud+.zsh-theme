@@ -6,7 +6,7 @@ function cached_env_prompt {
     mkdir -p $cache_dir
     cache_file=$cache_dir/$1 
     if [ $(find $cache_dir -name $1 -mmin -5 | wc -l) -eq 0 ]; then
-      $1 version | sed -e 's/ (.*)//' > $cache_file
+      $1 version | sed -e 's/ (.*)//' | xargs > $cache_file
     fi
     cat $cache_file
   else
