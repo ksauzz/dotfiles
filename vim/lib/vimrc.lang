@@ -62,7 +62,19 @@ au BufNewFile,BufRead *.sbt set filetype=scala
 "----------------------------------------------------
 " Groovy configuration
 "----------------------------------------------------
-au BufNewFile,BufRead *.gradle,Jenkinsfile set filetype=groovy
+au BufNewFile,BufRead *.gradle set filetype=groovy
+
+"----------------------------------------------------
+" Jenkinsfile configuration
+"----------------------------------------------------
+function! JenkinsSetting()
+  set filetype=groovy
+  set tabstop=4
+  set shiftwidth=4
+  set softtabstop=4
+  set expandtab
+endfunction
+au BufNewFile,BufRead Jenkinsfile call JenkinsSetting()
 
 "----------------------------------------------------
 " js configuration
