@@ -79,7 +79,7 @@ au BufNewFile,BufRead Jenkinsfile call JenkinsSetting()
 "----------------------------------------------------
 " js configuration
 "----------------------------------------------------
-au BufNewFile,BufRead *.json set filetype=javascript
+"au BufNewFile,BufRead *.json set filetype=javascript
 
 "----------------------------------------------------
 " BQL configuration
