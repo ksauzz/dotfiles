@@ -67,6 +67,8 @@ Plugin 'pearofducks/ansible-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/deb.vim'
+Plugin 'leafgarland/typescript-vim'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
