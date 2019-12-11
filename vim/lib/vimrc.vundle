@@ -69,6 +69,10 @@ Plugin 'mhinz/vim-startify'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/deb.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'junegunn/fzf'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
