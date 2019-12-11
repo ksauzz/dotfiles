@@ -51,7 +51,7 @@ nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
 nnoremap <C-t> :tabedit<Return>
 nnoremap <C-x> :tabclose<Return>
 nnoremap <C-n> :tabnext<Return>
-nnoremap <C-p> :tabprevious<Return> 
+nnoremap <C-p> :tabprevious<Return>
 
 nnoremap <ESC><ESC> :nohlsearch<Return>
 nnoremap <F4> :TagbarToggle<Return>
