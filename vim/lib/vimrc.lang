@@ -121,8 +121,22 @@ function! CSetting()
   set softtabstop=2
   set expandtab
   inoremap <buffer> -> ->
+  let b:ale_linters = ['gcc']
 endfunction
 autocmd! FileType c call CSetting()
+
+"----------------------------------------------------
+" CPP language configuration
+"----------------------------------------------------
+function! CPPSetting()
+  set tabstop=2
+  set shiftwidth=2
+  set softtabstop=2
+  set expandtab
+  inoremap <buffer> -> ->
+  let b:ale_linters = ['gcc']
+endfunction
+autocmd! FileType cpp call CPPSetting()
 
 "----------------------------------------------------
 " Go language configuration
