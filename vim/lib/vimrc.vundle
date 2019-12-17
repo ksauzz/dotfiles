@@ -74,6 +74,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'junegunn/fzf'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 let g:vundle_default_git_proto='git'
 call vundle#end()
