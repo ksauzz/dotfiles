@@ -1,0 +1,63 @@
+#!/bin/bash
+# vim: set ft=sh
+
+ROOT_PATH=$PWD
+
+DOT_FILES=(
+  *rc
+  zprofile
+  zshenv
+  vim
+  rst2pdf
+  my.cnf
+  ctags
+  tmux.conf
+)
+
+make_slink(){
+  echo installing dotfiles...
+  for file in  ${DOT_FILES[@]}; do
+    if [ -L ~/.$file ]; then
+      echo "~/.$file is exist"
+    elif [ -e ~/.$file ]; then
+      mv -v ~/.$file ~/.$file.back
+      ln -vsb $ROOT_PATH/$file ~/.$file
+    else
+      ln -vs $ROOT_PATH/$file ~/.$file
+    fi
+  done
+}
+
+configure_gitignore(){
+  GITIGNORE=~/.gitignore
+
+  git config --global core.excludesfile $GITIGNORE
+  tags_cnt=`grep -c "doc/tags"  $GITIGNORE`
+  if [ $tags_cnt -eq 0 ]; then
+    echo doc/tags    >> $GITIGNORE
+    echo doc/tags-ja >> $GITIGNORE
+  fi
+}
+
+make_vimproc(){
+  # make vimproc
+  cd vim/bundle/vimproc
+  if [ -e autoload/proc.so ] ;then
+    cd $ROOT_PATH
+    return
+  fi
+
+  echo make vimproc
+  case "${OSTYPE}" in
+    freebsd*|darwin*|linux*)
+      make
+      ;;
+  esac
+  cd $ROOT_PATH
+}
+
+git submodule update --init
+vim +BundleInstall +:q +:q
+make_slink
+configure_gitignore
+make_vimproc
