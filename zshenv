@@ -26,6 +26,7 @@ export PYTHONPATH=/usr/local/mercurial/lib/python2.6/site-packages/
 export PERLBREW_ROOT=~/.perlbrew
 
 export GOPATH=$HOME/.go
+export GTAGSLABEL=pygments
 
 # Macports
 export PORTS_HOME=/usr/local/macports
