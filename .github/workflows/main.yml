@@ -5,7 +5,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+    - name: update for git submodule w/ git scheme
+      run: |
+        # see: https://github.com/actions/checkout/issues/14
+        #
+        # disable the keychain credential helper
+        git config --global credential.helper ""
+        # enable the local store credential helper
+        git config --global --add credential.helper store
+        # add credential
+        echo "https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com" >> ~/.git-credentials
+        # tell git to use https instead of ssh whenever it encounters it
+        sh -c 'git config --global url."https://github.com/".insteadof git@github.com:'
     - name: Install dependencies
       run: |
         sudo apt-get install -y --no-install-recommends vim zsh python3-pip build-essential
@@ -17,6 +29,4 @@ jobs:
       run: shellcheck ./install || true
     - name: Run ./install
       run: ./install
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
