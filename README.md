@@ -1,5 +1,7 @@
 # Dotfiles
 
+![test](https://github.com/ksauzz/dotfiles/workflows/test/badge.svg)
+
 ## Getting Started
 
 ```
