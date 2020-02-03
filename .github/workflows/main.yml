@@ -28,8 +28,8 @@ jobs:
         pip3 install shellcheck-py
       env:
         DEBIAN_FRONTEND: noninteractive
-    - name: Run ShellCheck(FIXME)
-      run: shellcheck ./install || true
+    - name: Run ShellCheck
+      run: shellcheck ./install
     - name: Run ./install
       run: ./install
 

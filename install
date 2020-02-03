@@ -18,14 +18,14 @@ DOT_FILES=(
 
 make_slink(){
   echo installing dotfiles...
-  for file in  ${DOT_FILES[@]}; do
-    if [ -L ~/.$file ]; then
-      echo "~/.$file is exist"
-    elif [ -e ~/.$file ]; then
-      mv -v ~/.$file ~/.$file.back
-      ln -vsb $ROOT_PATH/$file ~/.$file
+  for file in  "${DOT_FILES[@]}"; do
+    if [ -L "$HOME/.$file" ]; then
+      echo "$HOME/.$file is exist"
+    elif [ -e "$HOME/.$file" ]; then
+      mv -v "$HOME/.$file" "$HOME/.$file.back"
+      ln -vsb "$ROOT_PATH/$file" "$HOME/.$file"
     else
-      ln -vs $ROOT_PATH/$file ~/.$file
+      ln -vs "$ROOT_PATH/$file" "$HOME/.$file"
     fi
   done
 }
@@ -35,8 +35,8 @@ configure_gitignore(){
 
   git config --global core.excludesfile $GITIGNORE
   tags_cnt=0
-  [ -f $GITIGNORE ] && tags_cnt=`grep -c "doc/tags"  $GITIGNORE`
-  if [ $tags_cnt -eq 0 ]; then
+  [ -f "$GITIGNORE" ] && tags_cnt=$(grep -c "doc/tags"  $GITIGNORE)
+  if [ "$tags_cnt" -eq 0 ]; then
     echo doc/tags    >> $GITIGNORE
     echo doc/tags-ja >> $GITIGNORE
   fi
@@ -46,7 +46,7 @@ make_vimproc(){
   # make vimproc
   cd vim/bundle/vimproc
   if [ -e autoload/proc.so ] ;then
-    cd $ROOT_PATH
+    cd "$ROOT_PATH"
     return
   fi
 
@@ -56,7 +56,7 @@ make_vimproc(){
       make
       ;;
   esac
-  cd $ROOT_PATH
+  cd "$ROOT_PATH"
 }
 
 git submodule update --init
