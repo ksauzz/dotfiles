@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: make symlink of $HOME/dotfiles
+      run:
+        ln -sv $GITHUB_WORKSPACE $HOME/dotfiles
     - name: update for git submodule w/ git scheme
       run: |
         # see: https://github.com/actions/checkout/issues/14
