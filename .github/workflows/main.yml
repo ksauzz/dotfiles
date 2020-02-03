@@ -1,0 +1,22 @@
+name: test
+on:
+  push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: |
+        sudo apt-get install -y --no-install-recommends vim zsh python3-pip build-essential
+        pip3 install -U pip
+        pip3 install shellcheck-py
+      env:
+        DEBIAN_FRONTEND: noninteractive
+    - name: Run ShellCheck(FIXME)
+      run: shellcheck ./install || true
+    - name: Run ./install
+      run: ./install
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
