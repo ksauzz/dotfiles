@@ -34,7 +34,8 @@ configure_gitignore(){
   GITIGNORE=~/.gitignore
 
   git config --global core.excludesfile $GITIGNORE
-  tags_cnt=`grep -c "doc/tags"  $GITIGNORE`
+  tags_cnt=0
+  [ -f $GITIGNORE ] && tags_cnt=`grep -c "doc/tags"  $GITIGNORE`
   if [ $tags_cnt -eq 0 ]; then
     echo doc/tags    >> $GITIGNORE
     echo doc/tags-ja >> $GITIGNORE
@@ -59,7 +60,7 @@ make_vimproc(){
 }
 
 git submodule update --init
-vim +BundleInstall +:q +:q
 make_slink
+vim -T dumb -c BundleInstall -c ':q' -c ':q'
 configure_gitignore
 make_vimproc
