@@ -50,6 +50,7 @@ export M2_REPO=$HOME/.m2/repository
 export MAVEN_OPTS="-Dfile.encoding=UTF-8"
 export EDITOR=vim
 export MANPAGER="less"
+export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
