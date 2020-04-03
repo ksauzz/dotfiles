@@ -7,7 +7,7 @@ source ~/dotfiles/vim/lib/vimrc.basics
 " external resource
 "----------------------------------------------------
 source ~/dotfiles/vim/lib/vimrc.plugins
-source ~/dotfiles/vim/lib/vimrc.neocomplecache
 source ~/dotfiles/vim/lib/vimrc.highlight
 source ~/dotfiles/vim/lib/vimrc.lang
+source ~/dotfiles/vim/lib/vimrc.lsp
 
