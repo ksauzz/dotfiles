@@ -2,7 +2,9 @@
 syntax on
 filetype plugin indent on
 
-colorscheme default
+if exists(expand('~/dotfiles/vim/bundle/dracura'))
+  colorscheme dracula
+endif
 set background=dark
 
 "set number

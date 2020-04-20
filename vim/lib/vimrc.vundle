@@ -37,7 +37,6 @@ Plugin 'dense-analysis/ale'
 Plugin 'plasticboy/vim-markdown.git'
 Plugin 'vim-scripts/groovy.vim.git'
 Plugin 'vim-scripts/VimClojure.git'
-Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'epmatsw/ag.vim.git'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'vim-erlang/vim-erlang-runtime.git'
@@ -80,6 +79,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'thomasfaingnaert/vim-lsp-snippets'
 Plugin 'thomasfaingnaert/vim-lsp-neosnippet'
+Plugin 'dracula/vim', {'name': 'dracura'}
 
 let g:vundle_default_git_proto='git'
 call vundle#end()

@@ -1,3 +1,6 @@
-let g:solarized_termcolors=256
-source ~/dotfiles/vim/lib/vimrc.common
+if has('nvim')
+  source ~/dotfiles/vim/lib/nvimrc.common
+else
+  source ~/dotfiles/vim/lib/vimrc.common
+endif
 
