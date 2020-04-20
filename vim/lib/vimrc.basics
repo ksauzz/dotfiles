@@ -2,7 +2,7 @@
 syntax on
 filetype plugin indent on
 
-if exists(expand('~/dotfiles/vim/bundle/dracura'))
+if isdirectory(expand('~/dotfiles/vim/bundle/dracura'))
   colorscheme dracula
 endif
 set background=dark
