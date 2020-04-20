@@ -2,7 +2,12 @@
 syntax on
 filetype plugin indent on
 
-if isdirectory(expand('~/dotfiles/vim/bundle/dracura'))
+function s:has_plugin(name)
+  return isdirectory(expand('~/dotfiles/vim/bundle/' . a:name))
+endfunction
+
+
+if s:has_plugin('dracura')
   colorscheme dracula
 endif
 set background=dark
