@@ -1,5 +1,8 @@
 " vim: filetype=vim
 
+nnoremap <C-]> :LspDefinition<Return>
+nnoremap <C-k> :LspHover<Return>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python
 """""""""""""""""""""""""""""""""""""""""""""""""""""
