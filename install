@@ -42,29 +42,19 @@ configure_gitignore(){
   fi
 }
 
-make_vimproc(){
-  # make vimproc
-  cd vim/bundle/vimproc
-  if [ -e autoload/proc.so ] ;then
-    cd "$ROOT_PATH"
-    return
-  fi
-
-  echo make vimproc
-  case "${OSTYPE}" in
-    freebsd*|darwin*|linux*)
-      make
-      ;;
-  esac
-  cd "$ROOT_PATH"
+install_vim_plug() {
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/0.10.0/plug.vim
+  mkdir -p ~/.local/share/nvim/site/autoload/
+  ln -vs ~/.vim/autoload/plug.vim ~/.local/share/nvim/site/autoload/
 }
 
 main() {
   git submodule update --init
   make_slink
-  vim -T dumb -c BundleInstall -c ':q' -c ':q'
+  install_vim_plug
+  vim -T dumb -c PlugInstall -c ':q' -c ':q'
   configure_gitignore
-  make_vimproc
 }
 
 main

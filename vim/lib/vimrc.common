@@ -1,5 +1,5 @@
 " vim: filetype=vim
-source ~/dotfiles/vim/lib/vimrc.vundle
+source ~/dotfiles/vim/lib/vimrc.vim-plug
 
 source ~/dotfiles/vim/lib/vimrc.basics
 

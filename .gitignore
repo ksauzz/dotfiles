@@ -1,4 +1,5 @@
 .netrwhist
 zshprofile.local
-vim/bundle/
 vim/view/
+vim/autoload/
+vim/plugged/
