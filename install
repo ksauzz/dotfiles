@@ -46,7 +46,9 @@ install_vim_plug() {
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/0.10.0/plug.vim
   mkdir -p ~/.local/share/nvim/site/autoload/
-  ln -vs ~/.vim/autoload/plug.vim ~/.local/share/nvim/site/autoload/
+  if [ ! -L "$HOME/.$file" ]; then
+    ln -vs ~/.vim/autoload/plug.vim ~/.local/share/nvim/site/autoload/
+  fi
 }
 
 main() {
