@@ -14,7 +14,7 @@ function s:has_plugin(name)
 endfunction
 
 
-if s:has_plugin('dracura')
+if s:has_plugin('dracula')
   colorscheme dracula
 endif
 set background=dark
