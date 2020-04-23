@@ -2,8 +2,15 @@
 syntax on
 filetype plugin indent on
 
+function s:colorschemes()
+  return uniq(sort(map(
+    \  globpath(&runtimepath, "colors/*.vim", 0, 1),
+    \  'fnamemodify(v:val, ":t:r")'
+    \  )))
+endfunction
+
 function s:has_plugin(name)
-  return stridx(&rtp, '/dracura/') > 0
+  return index(s:colorschemes(), a:name) >= 0
 endfunction
 
 
