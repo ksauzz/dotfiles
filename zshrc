@@ -285,6 +285,6 @@ safety_source `which virtualenvwrapper.sh`
 safety_source $HOME/.nvm/nvm.sh
 safety_source $(pyenv which aws_zsh_completer.sh)
 safety_source /opt/google-cloud-sdk/completion.zsh.inc
-[ $(command -v jenkinscli) != "" ] && eval "$(_JENKINSCLI_COMPLETE=source_zsh jenkinscli)"
+[ "$(command -v jenkinscli)" != "" ] && eval "$(_JENKINSCLI_COMPLETE=source_zsh jenkinscli)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
