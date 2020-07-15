@@ -23,7 +23,6 @@ Plug 'tpope/vim-haml', {'for': 'haml'}
 Plug 'ecomba/vim-ruby-refactoring', {'for': 'ruby'}
 Plug 'Shougo/unite-outline'
 Plug 'vim-scripts/sudo.vim'
-Plug 'dense-analysis/ale'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/groovy.vim', {'for': 'groovy'}
 Plug 'vim-scripts/VimClojure', {'for': 'clojure'}
@@ -68,5 +67,6 @@ Plug 'honza/vim-snippets'
 Plug 'thomasfaingnaert/vim-lsp-snippets'
 Plug 'thomasfaingnaert/vim-lsp-neosnippet'
 Plug 'dracula/vim', {'as': 'dracura'}
+Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript', 'typescript']}
 
 call plug#end()
