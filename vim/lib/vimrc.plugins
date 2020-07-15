@@ -95,3 +95,9 @@ let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\
 "----------------------------------------------------
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'zenburn'
+
+"----------------------------------------------------
+" vim-prettier
+"----------------------------------------------------
+let g:prettier#autoformat_require_pragma = 0
+
