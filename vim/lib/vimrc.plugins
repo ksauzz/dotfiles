@@ -64,10 +64,26 @@ let g:go_highlight_build_constraints=1
 "----------------------------------------------------
 let g:tagbar_width = 40
 
+let g:tagbar_type_typescript = {
+  \ 'ctagstype': 'typescript',
+  \ 'kinds': [
+    \ 'c:classes',
+    \ 'n:modules',
+    \ 'f:functions',
+    \ 'v:variables',
+    \ 'v:varlambdas',
+    \ 'm:members',
+    \ 'i:interfaces',
+    \ 'e:enums',
+  \ ]
+\ }
+
+
 "----------------------------------------------------
 " vim-flake8
 "----------------------------------------------------
 let g:flake8_quickfix_height = 7
+let g:flake8_max_line_length = 120
 
 "----------------------------------------------------
 " multiple cursors
@@ -88,7 +104,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 "----------------------------------------------------
 " ALE
 "----------------------------------------------------
-let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")' --errors-only"
+"let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")' --errors-only"
 
 "----------------------------------------------------
 " airline
