@@ -92,6 +92,23 @@ if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.e
         \ })
 endif
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Kotlin
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+if executable(expand('~/lsp/kotlin-language-server/server/bin/kotlin-language-server'))
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'kotlin-language-server',
+        \ 'cmd': {server_info->[
+        \     &shell,
+        \     &shellcmdflag,
+        \     expand('~/lsp/kotlin-language-server/server/bin/kotlin-language-server')
+        \ ]},
+        \ 'whitelist': ['kotlin']
+        \ })
+endif
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clangd(C/C++)
 """""""""""""""""""""""""""""""""""""""""""""""""""""
