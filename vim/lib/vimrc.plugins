@@ -80,12 +80,6 @@ let g:tagbar_type_typescript = {
 
 
 "----------------------------------------------------
-" vim-flake8
-"----------------------------------------------------
-let g:flake8_quickfix_height = 7
-let g:flake8_max_line_length = 120
-
-"----------------------------------------------------
 " multiple cursors
 "----------------------------------------------------
 let g:multi_cursor_use_default_mapping=0
@@ -117,4 +111,17 @@ let g:airline_theme = 'zenburn'
 "----------------------------------------------------
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
+
+"----------------------------------------------------
+" vim-lsp-settings pyls-all
+"----------------------------------------------------
+let g:lsp_settings = {
+\   'pyls-all': {
+\     'workspace_config': {
+\       'pyls': {
+\         'configurationSources': ['flake8']
+\       }
+\     }
+\   },
+\}
 
