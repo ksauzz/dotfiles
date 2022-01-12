@@ -1,7 +1,7 @@
 #!/bin/bash
 # vim: set ft=sh
 
-set -e
+set -ue
 
 ROOT_PATH=$PWD
 
