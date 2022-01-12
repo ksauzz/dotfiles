@@ -113,12 +113,12 @@ let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
 "----------------------------------------------------
-" vim-lsp-settings pyls-all
+" vim-lsp-settings pylsp-all
 "----------------------------------------------------
 let g:lsp_settings = {
-\   'pyls-all': {
+\   'pylsp-all': {
 \     'workspace_config': {
-\       'pyls': {
+\       'pylsp': {
 \         'configurationSources': ['flake8']
 \       }
 \     }
