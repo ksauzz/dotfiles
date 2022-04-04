@@ -142,24 +142,6 @@ function erlenv {
   esac
 }
 
-function _k8senv_list {
-  kubectl config get-contexts
-}
-
-function _k8senv_set {
-  kubectl config use-context $1
-}
-
-function k8senv {
-  case "$1" in
-    "set")
-      _k8senv_set $2
-      ;;
-    *)
-      _k8senv_list
-  esac
-}
-
 safety_source $HOME/dotfiles/oh-my-zshrc
 [ `uname` = "Darwin" ] && safety_source $(brew --prefix autojump)/etc/autojump.sh
 
@@ -278,13 +260,9 @@ safety_source ~/dotfiles/zsh/lib/zsh-syntax-highlighting/zsh-syntax-highlighting
 safety_source ~/dotfiles/zshalias
 
 safety_source $HOME/.zprofile.local
-safety_source $HOME/.perlbrew/etc/bashrc
-
-safety_source `which virtualenvwrapper.sh`
 
 safety_source $HOME/.nvm/nvm.sh
 safety_source $(pyenv which aws_zsh_completer.sh)
 safety_source /opt/google-cloud-sdk/completion.zsh.inc
-[ "$(command -v jenkinscli)" != "" ] && eval "$(_JENKINSCLI_COMPLETE=source_zsh jenkinscli)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
