@@ -46,7 +46,7 @@ function gopath_prompt_info {
 PROMPT='\
 %{$fg_bold[blue]%}%n@%m%{$fg_bold[cyan]%}☁ %{$fg_bold[green]%}%p%{$fg[green]%}%~ \
 $(pyenv_prompt_info)%{$fg[green]%}\
-$(kube_prompt_info) \
+%{$fg_bold[magenta]%}$(kube_prompt_info) \
 %{$fg_bold[cyan]%}$(git_prompt_info)\
 '$'\n''\
 %{$fg_bold[blue]%}%% %{$reset_color%}'
