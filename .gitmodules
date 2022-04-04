@@ -1,18 +1,18 @@
 [submodule "zsh/lib/zaw"]
 	path = zsh/lib/zaw
-	url = git@github.com:ksauzz/zaw.git
+	url = https://github.com/ksauzz/zaw.git
 [submodule "zsh/lib/zsh-syntax-highlighting"]
 	path = zsh/lib/zsh-syntax-highlighting
-	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "zsh/lib/zsh-completions"]
 	path = zsh/lib/zsh-completions
-	url = git://github.com/zsh-users/zsh-completions.git
+	url = https://github.com/zsh-users/zsh-completions.git
 [submodule "zsh/lib/tmux-powerline"]
 	path = zsh/lib/tmux-powerline
-	url = git://github.com/ksauzz/tmux-powerline.git
+	url = https://github.com/ksauzz/tmux-powerline.git
 [submodule "zsh/lib/tmux-colors-solarized"]
 	path = zsh/lib/tmux-colors-solarized
-	url = git://github.com/seebi/tmux-colors-solarized.git
+	url = https://github.com/seebi/tmux-colors-solarized.git
 [submodule "zsh/lib/oh-my-zsh"]
 	path = zsh/lib/oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git

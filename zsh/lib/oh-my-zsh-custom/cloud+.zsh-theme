@@ -22,10 +22,10 @@ function pyenv_prompt_info {
   echo "🐍  $(cached_env_prompt pyenv) "
 }
 
-function kube_context {
+function kube_prompt_info {
   type kubectl >/dev/null 2>&1
   if [ $? -eq 0 ]; then
-    echo "(☸ $(kubectl config current-context 2>/dev/null))"
+    echo "(☸ $(kubectl config current-context 2>/dev/null): $(kubectl config view --minify -o jsonpath='{..namespace}' 2>/dev/null))"
   fi
 }
 
@@ -45,11 +45,8 @@ function gopath_prompt_info {
 
 PROMPT='\
 %{$fg_bold[blue]%}%n@%m%{$fg_bold[cyan]%}☁ %{$fg_bold[green]%}%p%{$fg[green]%}%~ \
-%{$fg_bold[blue]%}$(rbenv_prompt_info)\
 $(pyenv_prompt_info)%{$fg[green]%}\
-$(kube_context) \
-$(erlenv_prompt_info) \
-%{$fg_bold[cyan]%}$(gopath_prompt_info) \
+%{$fg_bold[magenta]%}$(kube_prompt_info) \
 %{$fg_bold[cyan]%}$(git_prompt_info)\
 '$'\n''\
 %{$fg_bold[blue]%}%% %{$reset_color%}'
