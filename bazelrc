@@ -1,0 +1,2 @@
+--sandbox_writable_path=$HOME/.ccache
+--sandbox_writable_path=$HOME/.cache/terraform
