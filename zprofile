@@ -20,5 +20,10 @@ if [ -d ~/.exenv ]; then
   export PATH=$EXENV_ROOT/bin:$PATH
   eval "$(exenv init - zsh)"
 fi
+## zoxide configuration
+type zoxide >/dev/null 2>&1
+if [ "$?" -eq 0 ]; then
+  eval "$(zoxide init zsh)"
+fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
