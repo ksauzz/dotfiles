@@ -1,2 +1,5 @@
---sandbox_writable_path=$HOME/.ccache
---sandbox_writable_path=$HOME/.cache/terraform
+# build --sandbox_writable_path=<HOME>/.ccache  # FIXME: Update $HOME as abs path.
+build --color=yes
+build --verbose_failures
+test --test_summary=detailed
+test --test_output=errors
