@@ -44,9 +44,9 @@ configure_gitignore(){
 
 install_vim_plug() {
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/0.10.0/plug.vim
+        https://raw.githubusercontent.com/junegunn/vim-plug/0.11.0/plug.vim
   mkdir -p ~/.local/share/nvim/site/autoload/
-  if [ ! -L "$HOME/.$file" ]; then
+  if [ ! -L ~/.local/share/nvim/site/autoload/plug.vim ]; then
     ln -vs ~/.vim/autoload/plug.vim ~/.local/share/nvim/site/autoload/
   fi
 }
