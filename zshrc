@@ -263,6 +263,5 @@ safety_source $HOME/.zprofile.local
 
 safety_source $HOME/.nvm/nvm.sh
 safety_source $(pyenv which aws_zsh_completer.sh)
-safety_source /opt/google-cloud-sdk/completion.zsh.inc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
