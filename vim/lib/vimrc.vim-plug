@@ -20,7 +20,6 @@ Plug 'ksauzz/haproxy.vim'
 Plug 'banyan/recognize_charcode.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-haml', {'for': 'haml'}
-Plug 'ecomba/vim-ruby-refactoring', {'for': 'ruby'}
 Plug 'Shougo/unite-outline'
 Plug 'vim-scripts/sudo.vim'
 Plug 'plasticboy/vim-markdown'
