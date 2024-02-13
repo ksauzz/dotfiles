@@ -3,3 +3,5 @@ xinput --set-prop 'SynPS/2 Synaptics TouchPad' 'Coordinate Transformation Matrix
 xinput --set-prop 'Logitech M705' 'Coordinate Transformation Matrix'              2.8 0 0 0 2.8 0 0 0 1
 xinput --set-prop 'TPPS/2 IBM TrackPoint' 'Coordinate Transformation Matrix'      2.6 0 0 0 2.6 0 0 0 1
 xinput --set-prop "Kazuhiro Suzuki’s Trackpad" 'Coordinate Transformation Matrix'      2.2 0 0 0 2.2 0 0 0 1
+xinput --set-prop "Kensington Slimblade Trackball" 'Coordinate Transformation Matrix'      4.0 0 0 0 4.0 0 0 0 1
+xkeybinds
