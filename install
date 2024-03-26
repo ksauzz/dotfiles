@@ -3,6 +3,7 @@
 
 set -ue
 
+XDG_CONFIG_HOME=$HOME/.config
 ROOT_PATH=$PWD
 
 DOT_FILES=(
@@ -51,9 +52,15 @@ install_vim_plug() {
   fi
 }
 
+install_alacritty_conf(){
+  mkdir -p "$XDG_CONFIG_HOME/alacritty"
+  ln -vs "$ROOT_PATH/alacritty.toml" "$XDG_CONFIG_HOME/alacritty/"
+}
+
 main() {
   git submodule update --init
   make_slink
+  install_alacritty_conf
   install_vim_plug
   vim -T dumb -c PlugInstall -c ':q' -c ':q'
   configure_gitignore
