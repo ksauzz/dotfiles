@@ -1,0 +1,14 @@
+shell = "zsh"
+
+[window]
+dimensions.columns=180
+dimensions.lines=50
+opacity = 0.9
+blur = true
+dynamic_title = true
+
+[keyboard]
+bindings=[
+   { key = "V", mods= "Alt", action= "Paste" },
+   { key = "C", mods= "Alt", action= "Copy" }
+]
