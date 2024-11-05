@@ -43,10 +43,17 @@ function gopath_prompt_info {
   fi
 }
 
+function aws_prompt_info {
+  if [ "$AWS_PROFILE" != "" ]; then
+    echo "<$AWS_PROFILE> "
+  fi
+}
+
 PROMPT='\
 %{$fg_bold[blue]%}%n@%m%{$fg_bold[cyan]%}☁ %{$fg_bold[green]%}%p%{$fg[green]%}%~ \
 $(pyenv_prompt_info)%{$fg[green]%}\
 %{$fg_bold[magenta]%}$(kube_prompt_info) \
+%{$fg_bold[cyan]%}$(aws_prompt_info)\
 %{$fg_bold[cyan]%}$(git_prompt_info)\
 '$'\n''\
 %{$fg_bold[blue]%}%% %{$reset_color%}'
